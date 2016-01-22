@@ -1,0 +1,957 @@
+
+
+
+/* ========================== */
+/* ====    MAIN LAYOUT   ==== */
+/* ========================== */
+
+body {
+  background-color: $main-colour;
+  font-family: "Volkhov", "Palatino", serif;
+  font-size: 1.125rem;
+  line-height: 1.5rem;
+  text-align: center;
+  font-style: italic;
+}
+
+.container {
+  position: relative;
+  margin: 0 auto;
+  padding: 0 10px;
+  max-width: 77.5rem; /* full width is 1240px */
+}
+
+.clearfix:after {
+  content: " ";
+  display: block;
+  height: 0;
+  clear: both;
+  overflow: hidden;
+  visibility: hidden;
+}
+
+/* ==== BACKGROUND IMAGES ==== */
+
+#header__landing-background, #header__landing-background::after {
+  width: 100%;
+  height: 960px;
+  position: absolute;
+  top: 0;
+}
+
+#header__landing-background {
+  background: url("../graphics/landing-bg-top-q18-2000x960.jpg") no-repeat center center;
+  z-index: -20;
+}
+
+#header__landing-background::after {
+  background: url("../graphics/pattern-landing-overlay-3x3.png") repeat center center;
+  z-index: -10;
+  content: '';
+  left: 0;
+}
+
+#footer__home-background, #footer__home-background::after {
+  width: 100%;
+  height: 865px;
+  position: absolute;
+  bottom: 0;
+}
+
+#footer__home-background {
+  background: url("../graphics/home-bg-btm-q18-2000x865-blur-desat.jpg") no-repeat bottom center;
+  z-index: -20;
+}
+
+#footer__home-background::after {
+  background: url("../graphics/pattern-home-overlay-3x3.png") repeat bottom center;
+  z-index: -10;
+  content: '';
+  left: 0;
+}
+
+/* ====       TYPE       ==== */
+
+h1, h2, h3, h4, h5, h6, #nav__list li {
+  font-family: "Montserrat", "Arial", sans-serif;
+  font-weight: bold;
+  font-style: normal;
+  text-transform: uppercase;
+}
+
+#nav__list a, .callstoaction__click a, footer a {
+  text-decoration: none;
+}
+
+h1 {
+  color: #000;
+}
+
+.title, .em {
+  font-style: italic;
+}
+
+.strong {
+  font-weight: bold;
+}
+
+
+
+/* ========================== */
+/* ====      HEADER      ==== */
+/* ========================== */
+
+
+#header {
+  position: relative;
+}
+
+#header__logo {
+  margin-top: 158px;
+  margin-bottom: 56px;
+}
+
+
+/* ====   NAVIGATION    ==== */
+
+#nav__head {
+  display: none;
+}
+
+#nav__list {
+  border-top: 2px solid #fff;
+  border-bottom: 2px solid #fff;
+  margin-bottom: 57px;
+}
+
+#nav__list li {
+  display: inline-block;
+  font-weight: normal;
+  font-size: 1.125rem;
+  width: 15%;
+  margin: 18px 0.8%;
+  border-radius: 4px;
+  font-style: normal;
+  text-align: center;
+}
+
+#nav__list li.social-link {
+  display: none;
+}
+
+#nav__list li:first-child {
+  margin-left: 0;
+}
+
+#nav__list li:last-child {
+  margin-right: 0;
+}
+
+#nav__list li a {
+  color: #fff;
+  font-weight: normal;
+}
+
+/* ====   SOCIAL LINKS  ==== */
+
+.header__social--links {
+  width: 190px;
+  height: 40px;
+  position: relative;
+  text-align: center;
+  margin: 0 auto 128px;
+}
+
+.header__social--links ul {
+  display: inline-block;
+}
+
+li[class^="header__social--links"], span#footer__social--links {
+  display: inline-block;
+  position: relative;
+}
+
+li[class^="header__social--links"] {
+  float: left;
+  margin-right: 30px;
+  width: 36px;
+  height: 36px;
+  border: 2px solid #fff;
+  border-radius: 20px;
+}
+
+li[class^="header__social--links"]:last-child {
+  margin-right: 0;
+}
+
+li[class^="header__social--links"] a {
+  display: block;
+  width: 36px;
+  height: 36px;
+}
+
+li[class^="header__social--links"] img {
+  position: relative;
+}
+
+li.header__social--links--facebook img {
+  top: 7px;
+}
+
+li.header__social--links--twitter img {
+  top: 9px;
+}
+
+li.header__social--links--instagram img {
+  top: 8px;
+}
+
+
+/* ====    INTERACTION   ==== */
+
+#nav__list li, li[class^="header__social--links"], .social__contacts button {
+  background-color: transparent;
+  transition: background .1s ease-in;
+}
+
+#nav__list li:hover, li[class^="header__social--links"]:hover, .social__contacts button:hover {
+  background-color: rgb(75,90,98); /* rgb for IE8 */
+  background-color: rgba(255,255,255,0.3); /* opacity on rollover */
+  transition: background .1s ease-in;
+}
+
+
+/* ========================== */
+/* ====   MAIN CONTENT   ==== */
+/* ========================== */
+
+
+/* ====   INTRODUCTION   ==== */
+
+#introduction {
+  margin: 0 auto;
+  padding: 70px 0 42px;
+  background-color: #fff;
+}
+
+#introduction h1 {
+  font-size: 2.5rem;
+  line-height: 1.125;
+  margin: 0 25%;
+}
+
+#introduction p {
+  margin: 16px 25% 0;
+  line-height: 1.3888;
+}
+
+/* ====  CALLS TO ACTION ==== */
+
+#callstoaction {
+  color: #fff;
+}
+
+div[id^="callstoaction--"] {
+  width: 25%;
+  height: 0;
+  padding-bottom: 25%;
+  float: left;
+  position: relative;
+}
+
+div[id^="callstoaction--"] img {
+  max-width: 100%;
+  max-height: 100%;
+  position: absolute;
+  display: block;
+}
+
+.callstoaction__overlay {
+  height: 100%;
+  width: 100%;
+  position: absolute;
+  top: 0;
+  z-index: 10;
+}
+
+.callstoaction__graphic {
+  width: 65px;
+  height: 64px;
+  background: url("../graphics/sprite-94x77.png") no-repeat -27px -11px;
+  margin: 20px auto;
+}
+
+.callstoaction__text, .callstoaction__graphic, .callstoaction__click {
+  position: relative;
+  text-align: center;
+}
+
+.callstoaction__text {
+  font-size: 1.125rem;
+  font-weight: normal;
+  margin-top: 25%;
+}
+
+.callstoaction__click {
+  width: 50%;
+  padding: 2px;
+  border-radius: 4px;
+  position: relative;
+  left: 25%;
+}
+
+.callstoaction__click a, .callstoaction__click:hover a {
+  color: #fff;
+}
+
+
+/* ====    INTERACTION   ==== */
+
+.callstoaction__overlay {
+  background-color: rgba(0,0,0,0);
+  transition: background-color .1s ease-in;
+}
+
+.callstoaction__overlay:hover {
+  background-color: rgba(0,0,0,0.7);
+  transition: background-color .1s ease-in;
+}
+
+.callstoaction__overlay [class^="callstoaction__"] {
+  visibility: hidden;
+  transition: display .1s ease-in;
+}
+  
+.callstoaction__overlay:hover [class^="callstoaction__"] {
+  visibility: visible;
+  transition: display .1s ease-in;
+}
+
+.callstoaction__click {
+  background-color: transparent;
+  transition: background .1s ease-in;
+}
+
+.callstoaction__click:hover {
+  background-color: rgb(75,90,98); /* rgb for IE8 */
+  background-color: rgba(255,255,255,0.3); /* opacity on rollover */
+  transition: background .1s ease-in;
+}
+
+
+
+
+/* ========================== */
+/* ====  SOCIAL CONTACTS ==== */
+/* ========================== */
+
+
+.social__contacts {
+  margin-top: 42px;
+  height: 332px;
+  padding-bottom: 68px;
+  color: #fff;
+}
+
+div[id^="social__contacts--"] {
+  width: 32.258%;
+  float: left;
+  position: relative;
+  margin: 42px 0.80645% 0;
+}
+
+div[id^="social__contacts--"] h2 {
+  font-weight: normal;
+  padding-bottom: 16px;
+  border-bottom: 1px solid #fff;
+  margin-bottom: 16px;
+}
+
+div[id^="social__contacts--"]:first-child {
+  margin-left: 0;
+}
+
+div[id^="social__contacts--"]:last-child {
+  margin-right: 0;
+}
+
+.social__contacts--instagram--image {
+  width: 48.75%;
+  height: 0;
+  padding-bottom: 48.75%;
+  float: left;
+  display: block;
+  position: relative;
+  margin-right: 2.5%;
+}
+
+.social__contacts--instagram--image:last-child {
+  margin-right: 0;
+}
+
+.social__contacts--instagram--image img {
+  max-width: 100%;
+  max-height: 100%;
+  position: absolute;
+  display: block;
+}
+
+.social__contacts--text {
+  margin: 0 10% 40px; /* changed from 52px/13% because heavier font wrapped to 3 lines */
+}
+
+.social__contacts--tweet {
+  margin: 0 13%;
+  text-align: left;
+  font-size: 0.9375rem;
+  line-height: 1.4375; 
+}
+
+.social__contacts--twitter-timestamp {
+  display: block;
+  text-align: right;
+}
+
+/* ====      FORM      ==== */
+
+input[type=text] {
+  margin-bottom: 0.4em;
+  width: 100%;
+
+}
+
+.social__contacts button {
+  -webkit-appearance: none;
+  -moz-appearance: none;
+  background-color: transparent;
+  margin: 10px auto 26px;
+  border: 1px solid #fff;
+  width: 190px;
+  height: 35px;
+  border-radius: 4px;
+  font-size: 0.9375rem;
+  color: #fff;
+  font-family: "Montserrat", "Arial", sans-serif;
+  text-transform: uppercase;
+}
+
+.social__contacts fieldset {
+  margin: 0 52px 14px;
+  border: 1px solid #fff;
+  text-align: left;
+  height: 2.25rem;
+}
+
+.social__contacts input[type="text"], .social__contacts label, .social__contacts legend {
+  display: inline-block;
+}
+
+.social__contacts input[type="text"] {
+  width: 60%;
+  background-color: transparent;
+  border: 0;
+  font-size: 1em;
+  font-family: "Volkhov", "Palatino", serif;
+  color: #fff;
+}
+
+.social__contacts label {
+  width: 26%;
+  margin: 9px 2% 9px 4%;
+  border-right: 1px solid #fff;
+  line-height: 1rem;
+  font-style: italic;
+}
+
+.social__contacts legend {
+  margin: 8px 0 0 2%;
+  position: absolute;
+  border-right: 1px solid #fff;
+  height: 20px;
+  padding-right: 6px;
+}
+
+#signup--birthday--day, #signup--birthday--month {
+  background-color: transparent;
+  border: 0;
+  color: #fff;
+  font-family: inherit;
+  font-size: inherit;
+  position: relative;
+  margin: 6px 10px 0 0;
+  left: 6rem;
+}
+
+
+/* ========================== */
+/* ====      FOOTER      ==== */
+/* ========================== */
+
+footer {
+  position: relative;
+  clear: both;
+}
+
+footer p {
+  font-family: "Montserrat", "Arial", "sans-serif";
+  font-weight: normal;
+  font-style: normal;
+  color: #fff;
+  padding-top: 32px;
+  border-top: 4px double #fff;
+  font-size: 0.9375rem;
+  line-height: 1.4375; 
+}
+
+footer a {
+  color: #fff;
+}
+
+span[class^="footer__social--links--"] {
+  top: 2px;
+  margin-right: 20px;
+}
+
+span[class^="footer__social--links"]:last-child {
+  margin-right: 0;
+}
+
+.footer__contact::after {
+  content: "|";
+  margin: 0 20px;
+}
+
+span[class^="footer__social--links"] a {
+  display: inline-block;
+}
+
+.footer__social--links--facebook a {
+  width: 8px;
+  height: 14px;
+}
+
+.footer__social--links--twitter a {
+  width: 14px;
+  height: 11px;
+}
+
+
+.footer__social--links--instagram a {
+  width: 14px;
+  height: 13px;
+}
+
+
+
+
+/* ========================== */
+/* ====   MEDIAQUERIES   ==== */
+/* ========================== */
+
+
+/* -->>> MORE THAN 2000px, width of bg pic <<<-- */
+/* to expand background pictures when container is more than the width of the picture */
+@media only screen and (min-width: 125rem), only screen and (min-device-width: 125rem) {
+
+#header__landing-background, #footer__home-background {
+    background-size: cover;
+  }
+} /*end of media query min-width 2000px */
+
+
+
+
+/* -->>> LESS THAN 1260px, width of main container <<<-- */
+
+@media only screen and (max-width: 78.75rem), only screen and (max-device-width: 78.75rem) {
+
+
+.container {
+  padding: 0;
+}
+
+#nav__list li {
+  width: 13%;
+}
+
+#nav__list li:first-child {
+  margin-left: 0.8%;
+}
+
+#nav__list li:last-child {
+  margin-right: 0.8%;
+}
+
+.social__contacts .container {
+  padding: 0 1.5%;
+}
+
+.social__contacts legend[for="signup--birthday"] {
+  width: 35%;
+  margin-right: 0;
+}
+
+} /*end of media query max-width 1260px */
+
+
+
+/* -->>> LESS THAN 1100px <<<-- */
+
+@media only screen and (max-width: 68.75rem), only screen and (max-device-width: 68.75rem) {
+
+
+#header__landing-background, #header__landing-background::after {
+  height: 918px;
+}
+
+#header__logo {
+  margin-top: 80px;
+}
+
+.callstoaction__text {
+  margin-top: 20%;
+}
+
+.social__contacts {
+  text-align: center;
+}
+
+div[id^="social__contacts--"] {
+  width: 31%;
+  margin: 42px 1.5% 0;  
+}
+
+.social__contacts label[for="signup--"], .social__contacts legend[for="signup--"] {
+  width: 28%;
+}
+
+.social__contacts fieldset {
+  margin: 0 0 14px 0;
+}
+
+.social__contacts select[id^="signup--birthday"] {
+  margin-left: 10px;
+}
+
+.social__contacts--tweet {
+  margin: 0 4.5%;
+}
+
+} /*end of media query max-width 1100px */
+
+
+
+/* -->>> LESS THAN 900px <<<-- */
+
+@media only screen and (max-width: 56.25rem), only screen and (max-device-width: 56.25em) {
+
+#nav__list li {
+  width: 22%;
+}
+
+.callstoaction__text {
+  margin-top: 12%;
+}
+
+#signup--birthday--day, #signup--birthday--month {
+  margin: 6px 0 0;
+  left: 5rem;
+}
+
+} /*end of media query max-width 900px */
+
+
+
+/* -->>> LESS THAN 816px <<<-- */
+
+@media only screen and (max-width: 51rem), only screen and (max-device-width: 51rem) {
+
+
+#header__landing-background {
+  background: rgba(0, 0, 0, 0) url("../graphics/landing-bg-top-q18-2000x960.jpg") no-repeat scroll center -250px;
+  height: 720px;
+}
+
+#header__landing-background::after {
+  height: 720px;
+}
+
+.header__social--links {
+  width: 190px;
+  height: 40px;
+  position: relative;
+  text-align: center;
+  margin-bottom: 50px;
+}
+
+#introduction h1 {
+  margin: 0 15%;
+}
+
+#introduction p {
+  margin: 16px 15% 0 15%;
+}
+
+.callstoaction__text {
+  margin-top: 10%;
+}
+
+} /*end of media query max-width 816px */
+
+
+
+/* -->>> LESS THAN 736px <<<-- */
+@media only screen and (max-width: 46rem), only screen and (max-device-width: 46rem) {
+
+
+.callstoaction__text {
+  margin-top: 8%;
+  font-size: 0.825rem;
+  padding: 0 10%;
+}
+
+.callstoaction__graphic {
+  margin: 5px auto;
+}
+
+.callstoaction__click {
+  font-size: 0.825rem;
+}
+
+.social__contacts button {
+  width: 100%;
+}
+
+} /*end of media query max-width 736px */
+
+
+/* -->>> LESS THAN 560px <<<-- */
+/*   instigates mobile layout  */
+
+@media only screen and (max-width: 35rem), only screen and (max-device-width: 35rem) {
+
+
+#header__landing-background {
+  background: rgba(0, 0, 0, 0) url("../graphics/landing-bg-top-q18-2000x960.jpg") no-repeat scroll center -300px;
+  height: 618px;
+}
+
+#header__landing-background::after {
+  height: 618px;
+}
+
+#header__logo {
+  margin: 7% 0 7% 7%;
+  position: relative;
+  text-align: left;
+  width: 56.5%; /* makes it high enough to force social icons to fit */
+}
+
+#header__logo img {
+  width: 100%;
+}
+
+.header__social--links {
+  height: auto;
+  margin: 0 7% 0 0;
+  position: absolute;
+  right: 0;
+  bottom: 0;
+  width: 40px;
+}
+
+.no-js .header__social--links {
+  display: none;
+}
+
+li[class^="header__social--links"] {
+  margin-right: 0;
+  margin-top: 35%;
+  bottom: 0;
+}
+
+#nav__head {
+  color: #fff;
+  display: none;
+  font-family: "Montserrat","Arial",sans-serif;
+  font-style: normal;
+  margin-right: 3%;
+  position: absolute;
+  right: 0;
+  text-transform: uppercase;
+  top: -12px;
+}
+
+.no-js #nav__head {
+  visibility: hidden;
+}
+
+#nav__head.closed {
+  display: block;
+}
+
+#nav__head::after {
+  content: '';
+  background: transparent url("../graphics/sprite-94x77.png") no-repeat -1px -12px;
+  display: inline-block;
+  height: 1.5rem;
+  margin-left: 10px;
+  position: relative;
+  top: 6px;
+  width: 1.5rem;
+}
+
+.no-js #nav__list {
+  top: -4px;
+}
+
+#nav__list {
+  background-color: rgba(0,0,0,0.3);
+  display: block;
+  float: right;
+  padding: 4px;
+  position: absolute;
+  right: 3%;
+  top: 24px;
+  z-index: 30;
+  margin-top: 0;
+  margin-bottom: 0;
+  border: 0;
+  border-radius: 4px;
+  white-space: nowrap;
+}
+
+.no-js #nav__list {
+  top: -4px;
+}
+
+.js #nav__list.closed {
+  display: none;
+}
+
+#nav__list li {
+  display: block;
+  border: 0;
+  margin: 4px 0;
+  padding: 0 4px;
+  text-align: right;
+  width: auto;
+  font-size: 0.9rem;
+}
+
+.no-js #nav__list li.social-link {
+  display: block;
+}
+
+#nav__list li:first-child {
+  margin-left: 0;
+}
+
+#nav__list a {
+  margin: 0;
+}
+
+#introduction h1 {
+  margin: 0 5%;
+}
+
+#introduction p {
+  margin: 16px 5% 0 5%;
+}
+
+div[id^="callstoaction--"] {
+  padding-bottom: 50%;
+  width: 50%;
+}
+
+.callstoaction__text {
+  margin-top: 15%;
+}
+
+.social__contacts {
+  margin-top: 10px;
+  border-bottom: 0;
+}
+
+div[id^="social__contacts--"], div[id^="social__contacts--"]:first-child, div[id^="social__contacts--"]:last-child {
+  margin: 0;
+}
+
+div[id^="social__contacts--"]:last-child {
+  border-bottom: 0;
+}
+
+div[id^="social__contacts--"] {
+  width: 97%;
+  border-bottom: 1px solid #fff;
+  margin-bottom: 20px;
+  padding: 10px 1.5% 20px;
+}
+
+div[id^="social__contacts--"] h2 {
+  margin-bottom: 0;
+  border-bottom: 0;
+  padding-bottom: 0;
+  padding-left: 1.5%;
+  text-align: left;
+}
+
+p.social__contacts__handle {
+  margin-right: 1.5%;
+  position: absolute;
+  right: 0;
+  top: 10px;
+}
+
+.social__contacts--text {
+  margin: 10px 10px 20px 10px;
+}
+
+.social__contacts--instagram--image:first-child img {
+  right: 0;
+}
+
+.footer__contact::after, span[class^="footer__social--links--"] {
+  margin: 0 7px;
+}
+
+.social__contacts legend {
+  width: 26%;
+}
+
+#signup--birthday--day, #signup--birthday--month {
+  left: 10rem;
+}
+
+} /*end of media query max-width 560px */
+
+
+/* -->>> LESS THAN 450px <<<-- */
+
+@media only screen and (max-width: 28.125rem), only screen and (max-device-width: 28.125rem) {
+
+#introduction {
+  padding-top: 50px;
+}
+
+#introduction h1 {
+  font-size: 2rem;
+}
+
+#introduction p {
+  font-size: 1rem;
+}
+
+} /*end of media query max-width 450px */
+
+
+/* -->>> LESS THAN 400px <<<-- */
+/* ->> move to mobile view <<- */
+
+@media only screen and (max-width: 25rem), only screen and (max-device-width: 25rem) {
+
+li[class^="header__social--links"] {
+  margin-top: 15%;
+}
+
+} /*end of media query max-width 400px */

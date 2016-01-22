@@ -1,0 +1,86 @@
+/* ====     CAROUSEL     ==== */
+
+#carousel {
+  max-width: 1240px;
+  max-height: 490px;
+  position: relative;
+  overflow: hidden;
+  float: left;
+  margin-top: 0;
+  list-style: none;
+  padding-left: 0;
+}
+
+.no-js ul#carousel__slides li:first-child {
+  position: relative;
+  opacity: 1;
+}
+
+.carousel__slide {
+  position: absolute;
+  width: 100%;
+  top: 0;
+  padding-left: 0;
+  display: block;
+}
+
+.carousel__slide {
+  z-index: 1;
+  opacity: 0;
+  transition: opacity 1.5s ease-in;
+}
+
+li.carousel__slide.active {
+  opacity: 0;
+  transition: opacity 1.5s ease-out;
+}
+
+#carousel li.carousel__slide.next {
+  position: static;
+  z-index: 10;
+  opacity: 1;
+  transition: opacity 1.5s ease-out;
+}
+
+#carousel li.carousel__slide.start {
+  position: static;
+  z-index: 10;
+  opacity: 1;
+  transition: none;
+}
+
+.carousel__slide img {
+  position: relative;
+  width: 100%;
+  max-width: 1240px;
+}
+
+.carousel__indicator__container {
+  position: absolute;
+  bottom: 25px;
+  width: 100%;
+  z-index: 30;
+}
+
+#carousel__indicator__list {
+  display: inline-block;
+}
+
+.carousel__indicator.start, .carousel__indicator.active {
+  -webkit-transform: rotate(45deg);
+  -moz-transform: rotate(45deg);
+  -ms-transform: rotate(45deg);
+  transform: rotate(45deg);
+}
+
+li[class^="carousel__indicator"] {
+  width: 10px;
+  height: 10px;
+  margin-right: 10px;
+  background-color: #fff;
+  float: left;
+}
+
+li[class^="carousel__indicator"]:last-child {
+  margin-right: 0;
+}
