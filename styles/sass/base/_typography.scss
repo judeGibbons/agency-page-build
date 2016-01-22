@@ -1,0 +1,22 @@
+h1, h2, h3, h4, h5, h6, #nav__list li {
+  font-family: "Montserrat", "Arial", sans-serif;
+  font-weight: bold;
+  font-style: normal;
+  text-transform: uppercase;
+}
+
+#nav__list a, .callstoaction__click a, footer a {
+  text-decoration: none;
+}
+
+h1 {
+  color: #000;
+}
+
+.title, .em {
+  font-style: italic;
+}
+
+.strong {
+  font-weight: bold;
+}

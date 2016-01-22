@@ -1,7 +1,4 @@
-/* ========================== */
-/* ====      RESET       ==== */
-/* ========================== */
-/* http://meyerweb.com/eric/tools/css/reset/ - v2.0 | 20110126 - License: none (public domain) */
+/* based on http://meyerweb.com/eric/tools/css/reset/ - v2.0 | 20110126 - License: none (public domain) */
 html, body, div, span, applet, object, iframe,
 h1, h2, h3, h4, h5, h6, p, blockquote, pre,
 a, abbr, acronym, address, big, cite, code,
@@ -53,9 +50,24 @@ table {
   border-collapse: collapse;
   border-spacing: 0; }
 
-/* ========================== */
-/* ====   END OF RESET   ==== */
-/* ========================== */
+h1, h2, h3, h4, h5, h6, #nav__list li {
+  font-family: "Montserrat", "Arial", sans-serif;
+  font-weight: bold;
+  font-style: normal;
+  text-transform: uppercase; }
+
+#nav__list a, .callstoaction__click a, footer a {
+  text-decoration: none; }
+
+h1 {
+  color: #000; }
+
+.title, .em {
+  font-style: italic; }
+
+.strong {
+  font-weight: bold; }
+
 /* ========================== */
 /* ====    MAIN LAYOUT   ==== */
 /* ========================== */
@@ -116,121 +128,9 @@ body {
   left: 0; }
 
 /* ====       TYPE       ==== */
-h1, h2, h3, h4, h5, h6, #nav__list li {
-  font-family: "Montserrat", "Arial", sans-serif;
-  font-weight: bold;
-  font-style: normal;
-  text-transform: uppercase; }
-
-#nav__list a, .callstoaction__click a, footer a {
-  text-decoration: none; }
-
-h1 {
-  color: #000; }
-
-.title, .em {
-  font-style: italic; }
-
-.strong {
-  font-weight: bold; }
-
 /* ========================== */
 /* ====      HEADER      ==== */
 /* ========================== */
-#header {
-  position: relative; }
-
-#header__logo {
-  margin-top: 158px;
-  margin-bottom: 56px; }
-
-/* ====   NAVIGATION    ==== */
-#nav__head {
-  display: none; }
-
-#nav__list {
-  border-top: 2px solid #fff;
-  border-bottom: 2px solid #fff;
-  margin-bottom: 57px; }
-
-#nav__list li {
-  display: inline-block;
-  font-weight: normal;
-  font-size: 1.125rem;
-  width: 15%;
-  margin: 18px 0.8%;
-  border-radius: 4px;
-  font-style: normal;
-  text-align: center; }
-
-#nav__list li.social-link {
-  display: none; }
-
-#nav__list li:first-child {
-  margin-left: 0; }
-
-#nav__list li:last-child {
-  margin-right: 0; }
-
-#nav__list li a {
-  color: #fff;
-  font-weight: normal; }
-
-/* ====   SOCIAL LINKS  ==== */
-.header__social--links {
-  width: 190px;
-  height: 40px;
-  position: relative;
-  text-align: center;
-  margin: 0 auto 128px; }
-
-.header__social--links ul {
-  display: inline-block; }
-
-li[class^="header__social--links"], span#footer__social--links {
-  display: inline-block;
-  position: relative; }
-
-li[class^="header__social--links"] {
-  float: left;
-  margin-right: 30px;
-  width: 36px;
-  height: 36px;
-  border: 2px solid #fff;
-  border-radius: 20px; }
-
-li[class^="header__social--links"]:last-child {
-  margin-right: 0; }
-
-li[class^="header__social--links"] a {
-  display: block;
-  width: 36px;
-  height: 36px; }
-
-li[class^="header__social--links"] img {
-  position: relative; }
-
-li.header__social--links--facebook img {
-  top: 7px; }
-
-li.header__social--links--twitter img {
-  top: 9px; }
-
-li.header__social--links--instagram img {
-  top: 8px; }
-
-/* ====    INTERACTION   ==== */
-#nav__list li, li[class^="header__social--links"], .social__contacts button {
-  background-color: transparent;
-  transition: background .1s ease-in; }
-
-#nav__list li:hover, li[class^="header__social--links"]:hover, .social__contacts button:hover {
-  background-color: #4b5a62;
-  /* rgb for IE8 */
-  background-color: rgba(255, 255, 255, 0.3);
-  /* opacity on rollover */
-  transition: background .1s ease-in; }
-
 /* ========================== */
 /* ====   MAIN CONTENT   ==== */
 /* ========================== */
@@ -783,6 +683,101 @@ span[class^="footer__social--links"] a {
   li[class^="header__social--links"] {
     margin-top: 15%; } }
 /*end of media query max-width 400px */
+header {
+  position: relative;
+  height: 120px;
+  background-color: #ffffff;
+  background-image: url("../../graphics/cogent-logo-background-84x120.png");
+  background-repeat: repeat-x; }
+
+#header__logo {
+  margin-top: 158px;
+  margin-bottom: 56px; }
+
+#nav__head {
+  display: none; }
+
+#nav__list {
+  border-top: 2px solid #fff;
+  border-bottom: 2px solid #fff;
+  margin-bottom: 57px; }
+
+#nav__list li {
+  display: inline-block;
+  font-weight: normal;
+  font-size: 1.125rem;
+  width: 15%;
+  margin: 18px 0.8%;
+  border-radius: 4px;
+  font-style: normal;
+  text-align: center; }
+
+#nav__list li.social-link {
+  display: none; }
+
+#nav__list li:first-child {
+  margin-left: 0; }
+
+#nav__list li:last-child {
+  margin-right: 0; }
+
+#nav__list li a {
+  color: #fff;
+  font-weight: normal; }
+
+#nav__list li, li[class^="header__social--links"], .social__contacts button {
+  background-color: transparent;
+  transition: background .1s ease-in; }
+
+#nav__list li:hover, li[class^="header__social--links"]:hover, .social__contacts button:hover {
+  background-color: #4b5a62;
+  /* rgb for IE8 */
+  background-color: rgba(255, 255, 255, 0.3);
+  /* opacity on rollover */
+  transition: background .1s ease-in; }
+
+.header__social--links {
+  width: 190px;
+  height: 40px;
+  position: relative;
+  text-align: center;
+  margin: 0 auto 128px; }
+
+.header__social--links ul {
+  display: inline-block; }
+
+li[class^="header__social--links"], span#footer__social--links {
+  display: inline-block;
+  position: relative; }
+
+li[class^="header__social--links"] {
+  float: left;
+  margin-right: 30px;
+  width: 36px;
+  height: 36px;
+  border: 2px solid #fff;
+  border-radius: 20px; }
+
+li[class^="header__social--links"]:last-child {
+  margin-right: 0; }
+
+li[class^="header__social--links"] a {
+  display: block;
+  width: 36px;
+  height: 36px; }
+
+li[class^="header__social--links"] img {
+  position: relative; }
+
+li.header__social--links--facebook img {
+  top: 7px; }
+
+li.header__social--links--twitter img {
+  top: 9px; }
+
+li.header__social--links--instagram img {
+  top: 8px; }
+
 /* ====     CAROUSEL     ==== */
 #carousel {
   max-width: 1240px;
