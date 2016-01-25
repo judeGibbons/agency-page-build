@@ -1,0 +1,160 @@
+#nav__head {
+  display: none;
+}
+
+#nav__list {
+  position: relative;
+  top: -79px;
+  text-align: right;
+//  border-top: 2px solid #fff;
+//  border-bottom: 2px solid #fff;
+//  margin-bottom: 57px;
+}
+
+#nav__list li {
+  display: inline-block;
+  //font-weight: normal;
+  font-size: 1rem;
+  //width: 15%;
+  //margin: 18px 0.8%;
+  //border-radius: 4px;
+  font-style: normal;
+  text-align: center;
+  color: #333;
+  margin-right: 6px;
+}
+
+
+#nav__list li ul {
+  display: none;
+}
+
+#nav__list li:hover ul {
+  display: block;
+}
+
+/*
+#nav__list li.social-link {
+  display: none;
+}
+
+#nav__list li:first-child {
+  margin-left: 0;
+}
+
+#nav__list li:last-child {
+  margin-right: 0;
+}
+
+
+#nav__list li a {
+  color: #fff;
+  font-weight: normal;
+}
+*/
+#nav__list li, li[class^="header__social--links"], .social__contacts button {
+  background-color: transparent;
+  transition: background .1s ease-in;
+}
+
+#nav__list li:hover, li[class^="header__social--links"]:hover, .social__contacts button:hover {
+  background-color: rgb(75,90,98); /* rgb for IE8 */
+  background-color: rgba(255,255,255,0.3); /* opacity on rollover */
+  transition: background .1s ease-in;
+}
+
+
+
+
+
+
+/* -->>> LESS THAN 560px <<<-- */
+/*   instigates mobile layout  */
+
+@media only screen and (max-width: 35rem), only screen and (max-device-width: 35rem) {
+
+
+
+
+#nav__head {
+  color: #fff;
+  display: none;
+  font-family: "Montserrat","Arial",sans-serif;
+  font-style: normal;
+  margin-right: 3%;
+  position: absolute;
+  right: 0;
+  text-transform: uppercase;
+  top: -12px;
+}
+
+.no-js #nav__head {
+  visibility: hidden;
+}
+
+#nav__head.closed {
+  display: block;
+}
+
+#nav__head::after {
+  content: '';
+  background: transparent url("../graphics/sprite-94x77.png") no-repeat -1px -12px;
+  display: inline-block;
+  height: 1.5rem;
+  margin-left: 10px;
+  position: relative;
+  top: 6px;
+  width: 1.5rem;
+}
+
+.no-js #nav__list {
+  top: -4px;
+}
+
+#nav__list {
+  background-color: rgba(0,0,0,0.3);
+  display: block;
+  float: right;
+  padding: 4px;
+  position: absolute;
+  right: 3%;
+  top: 24px;
+  z-index: 30;
+  margin-top: 0;
+  margin-bottom: 0;
+  border: 0;
+  border-radius: 4px;
+  white-space: nowrap;
+}
+
+.no-js #nav__list {
+  top: -4px;
+}
+
+.js #nav__list.closed {
+  display: none;
+}
+
+#nav__list li {
+  display: block;
+  border: 0;
+  margin: 4px 0;
+  padding: 0 4px;
+  text-align: right;
+  width: auto;
+  font-size: 0.9rem;
+}
+
+.no-js #nav__list li.social-link {
+  display: block;
+}
+
+#nav__list li:first-child {
+  margin-left: 0;
+}
+
+#nav__list a {
+  margin: 0;
+}
+
+} //end of mobile breakpoint

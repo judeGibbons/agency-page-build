@@ -2,18 +2,22 @@
 @import "base/reset";
 @import "base/variables";
 @import "base/typography";
-
-
-@import "base/cogent";
+@import "base/page_layout";
 
 
 
 
 // components
 
-@import "components/header/layout";
-@import "components/header/navigation";
-@import "components/header/social_links";
+@import "components/header_layout";
+@import "components/header_navigation";
+@import "components/header_social_links";
+@import "components/introduction";
 @import "components/carousel";
+@import "components/news_projects_links";
+@import "components/form";
 
+@import "components/footer";
+
+//@import "base/cogent";
 

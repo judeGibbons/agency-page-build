@@ -1,5 +1,6 @@
 document.addEventListener("DOMContentLoaded",init,false);
 
+
 function init() {
   addjsclass();
   createClosedElementsArray();
@@ -90,8 +91,10 @@ function carousel() {
       }
     }
     
-    // create the correct number of carousel indicators
 
+
+// create the correct number of carousel indicators
+/*
    // var indicatorsArray =[];
     var indicators = document.getElementById('carousel__indicator__list');
     for (i=1, maxi = imagesArray.length+1; i<maxi; i++) {
@@ -103,8 +106,9 @@ function carousel() {
       //indicatorsArray.push(thisIndicator);
     }
     document.getElementsByClassName("indicator1")[0].className += (" start");
-
+*/
   }
+  
   //  indicatorsArray[0].className += (" start");
 //  console.log("document.getElementsByClassName("indicator1")[0]");
   //use counter to create active and next classes on images in turn, and put active class on
@@ -122,7 +126,8 @@ function carousel() {
         imagesArray[i].className = imagesArray[i].className.replace(/(\s)next/,"");
         activeImage = imagesArray[(counter-1)%(imagesArray.length)];
         nextImage = imagesArray[(counter)%(imagesArray.length)];
-        var makeIndicatorActive = function() {
+ 
+ /*       var makeIndicatorActive = function() {
           return function() {
             activeIndicator = document.getElementsByClassName("indicator" + (i+1))[0];
           console.log("making indicator active")
@@ -133,16 +138,17 @@ function carousel() {
 
           console.log(activeIndicator) // all of them; active only added once though
 
-
+*/
 
               
 
       }
-          activeIndicator.className = activeIndicator.className.replace(/(\s)start/,"");
-          activeIndicator.className += (" active");
+ 
+ //         activeIndicator.className = activeIndicator.className.replace(/(\s)start/,"");
+ //         activeIndicator.className += (" active");
 
 
-                counter ++;
+      counter ++;
       activeImage.className += (" active");
       nextImage.className += (" next");
       imagesArray[(imagesArray.length)-2].className = imagesArray[(imagesArray.length)-2].className.replace(/(\s)start/,"");

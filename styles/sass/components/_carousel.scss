@@ -1,8 +1,10 @@
-/* ====     CAROUSEL     ==== */
+//<li class="carousel__slide slide2">
+//<p class="carousel__caption">Kendal to Kew</p>
+//<img src="./graphics/network-q-1240x390.jpg" alt="Thank you"></li>
 
 #carousel {
   max-width: 1240px;
-  max-height: 490px;
+  max-height: 390px;
   position: relative;
   overflow: hidden;
   float: left;
@@ -55,6 +57,35 @@ li.carousel__slide.active {
   max-width: 1240px;
 }
 
+.carousel__caption {
+  position: absolute;
+  max-width: 66%;
+  //max-width: 1240px;
+  //background-color: #666;
+  bottom: 20px;
+  left: 20px;
+  z-index: 10;
+  font-size: 2.5rem;
+  text-align: left; //varies?
+  color: $text-on-dark-bg;
+}
+
+
+//<li class="carousel__slide slide1"><p class="carousel__caption">Why?</p><img src="390.jpg"></li>
+
+.carousel__caption a::after {
+  //position: relative;
+  //max-width: 66%;
+  //max-width: 1240px;
+  //background-color: #666;
+  content: 'read more >';
+  white-space: nowrap;
+  font-size: 1.5rem;
+  margin-left: 10px;
+  font-style: italic;
+}
+
+/*
 .carousel__indicator__container {
   position: absolute;
   bottom: 25px;
@@ -84,3 +115,6 @@ li[class^="carousel__indicator"] {
 li[class^="carousel__indicator"]:last-child {
   margin-right: 0;
 }
+
+
+*/

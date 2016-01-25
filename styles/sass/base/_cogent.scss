@@ -1,205 +1,8 @@
 
 
-
-/* ========================== */
-/* ====    MAIN LAYOUT   ==== */
-/* ========================== */
-
-body {
-  background-color: $main-colour;
-  font-family: "Volkhov", "Palatino", serif;
-  font-size: 1.125rem;
-  line-height: 1.5rem;
-  text-align: center;
-  font-style: italic;
-}
-
-.container {
-  position: relative;
-  margin: 0 auto;
-  padding: 0 10px;
-  max-width: 77.5rem; /* full width is 1240px */
-}
-
-.clearfix:after {
-  content: " ";
-  display: block;
-  height: 0;
-  clear: both;
-  overflow: hidden;
-  visibility: hidden;
-}
-
-/* ==== BACKGROUND IMAGES ==== */
-
-#header__landing-background, #header__landing-background::after {
-  width: 100%;
-  height: 960px;
-  position: absolute;
-  top: 0;
-}
-
-#header__landing-background {
-  background: url("../graphics/landing-bg-top-q18-2000x960.jpg") no-repeat center center;
-  z-index: -20;
-}
-
-#header__landing-background::after {
-  background: url("../graphics/pattern-landing-overlay-3x3.png") repeat center center;
-  z-index: -10;
-  content: '';
-  left: 0;
-}
-
-#footer__home-background, #footer__home-background::after {
-  width: 100%;
-  height: 865px;
-  position: absolute;
-  bottom: 0;
-}
-
-#footer__home-background {
-  background: url("../graphics/home-bg-btm-q18-2000x865-blur-desat.jpg") no-repeat bottom center;
-  z-index: -20;
-}
-
-#footer__home-background::after {
-  background: url("../graphics/pattern-home-overlay-3x3.png") repeat bottom center;
-  z-index: -10;
-  content: '';
-  left: 0;
-}
-
-/* ====       TYPE       ==== */
-
-
-
-
-
-/* ========================== */
-/* ====      HEADER      ==== */
-/* ========================== */
-
-
-
-
-
-/* ========================== */
-/* ====   MAIN CONTENT   ==== */
-/* ========================== */
-
-
 /* ====   INTRODUCTION   ==== */
 
-#introduction {
-  margin: 0 auto;
-  padding: 70px 0 42px;
-  background-color: #fff;
-}
 
-#introduction h1 {
-  font-size: 2.5rem;
-  line-height: 1.125;
-  margin: 0 25%;
-}
-
-#introduction p {
-  margin: 16px 25% 0;
-  line-height: 1.3888;
-}
-
-/* ====  CALLS TO ACTION ==== */
-
-#callstoaction {
-  color: #fff;
-}
-
-div[id^="callstoaction--"] {
-  width: 25%;
-  height: 0;
-  padding-bottom: 25%;
-  float: left;
-  position: relative;
-}
-
-div[id^="callstoaction--"] img {
-  max-width: 100%;
-  max-height: 100%;
-  position: absolute;
-  display: block;
-}
-
-.callstoaction__overlay {
-  height: 100%;
-  width: 100%;
-  position: absolute;
-  top: 0;
-  z-index: 10;
-}
-
-.callstoaction__graphic {
-  width: 65px;
-  height: 64px;
-  background: url("../graphics/sprite-94x77.png") no-repeat -27px -11px;
-  margin: 20px auto;
-}
-
-.callstoaction__text, .callstoaction__graphic, .callstoaction__click {
-  position: relative;
-  text-align: center;
-}
-
-.callstoaction__text {
-  font-size: 1.125rem;
-  font-weight: normal;
-  margin-top: 25%;
-}
-
-.callstoaction__click {
-  width: 50%;
-  padding: 2px;
-  border-radius: 4px;
-  position: relative;
-  left: 25%;
-}
-
-.callstoaction__click a, .callstoaction__click:hover a {
-  color: #fff;
-}
-
-
-/* ====    INTERACTION   ==== */
-
-.callstoaction__overlay {
-  background-color: rgba(0,0,0,0);
-  transition: background-color .1s ease-in;
-}
-
-.callstoaction__overlay:hover {
-  background-color: rgba(0,0,0,0.7);
-  transition: background-color .1s ease-in;
-}
-
-.callstoaction__overlay [class^="callstoaction__"] {
-  visibility: hidden;
-  transition: display .1s ease-in;
-}
-  
-.callstoaction__overlay:hover [class^="callstoaction__"] {
-  visibility: visible;
-  transition: display .1s ease-in;
-}
-
-.callstoaction__click {
-  background-color: transparent;
-  transition: background .1s ease-in;
-}
-
-.callstoaction__click:hover {
-  background-color: rgb(75,90,98); /* rgb for IE8 */
-  background-color: rgba(255,255,255,0.3); /* opacity on rollover */
-  transition: background .1s ease-in;
-}
 
 
 
@@ -277,132 +80,12 @@ div[id^="social__contacts--"]:last-child {
 
 /* ====      FORM      ==== */
 
-input[type=text] {
-  margin-bottom: 0.4em;
-  width: 100%;
-
-}
-
-.social__contacts button {
-  -webkit-appearance: none;
-  -moz-appearance: none;
-  background-color: transparent;
-  margin: 10px auto 26px;
-  border: 1px solid #fff;
-  width: 190px;
-  height: 35px;
-  border-radius: 4px;
-  font-size: 0.9375rem;
-  color: #fff;
-  font-family: "Montserrat", "Arial", sans-serif;
-  text-transform: uppercase;
-}
-
-.social__contacts fieldset {
-  margin: 0 52px 14px;
-  border: 1px solid #fff;
-  text-align: left;
-  height: 2.25rem;
-}
-
-.social__contacts input[type="text"], .social__contacts label, .social__contacts legend {
-  display: inline-block;
-}
-
-.social__contacts input[type="text"] {
-  width: 60%;
-  background-color: transparent;
-  border: 0;
-  font-size: 1em;
-  font-family: "Volkhov", "Palatino", serif;
-  color: #fff;
-}
-
-.social__contacts label {
-  width: 26%;
-  margin: 9px 2% 9px 4%;
-  border-right: 1px solid #fff;
-  line-height: 1rem;
-  font-style: italic;
-}
-
-.social__contacts legend {
-  margin: 8px 0 0 2%;
-  position: absolute;
-  border-right: 1px solid #fff;
-  height: 20px;
-  padding-right: 6px;
-}
-
-#signup--birthday--day, #signup--birthday--month {
-  background-color: transparent;
-  border: 0;
-  color: #fff;
-  font-family: inherit;
-  font-size: inherit;
-  position: relative;
-  margin: 6px 10px 0 0;
-  left: 6rem;
-}
 
 
 /* ========================== */
 /* ====      FOOTER      ==== */
 /* ========================== */
 
-footer {
-  position: relative;
-  clear: both;
-}
-
-footer p {
-  font-family: "Montserrat", "Arial", "sans-serif";
-  font-weight: normal;
-  font-style: normal;
-  color: #fff;
-  padding-top: 32px;
-  border-top: 4px double #fff;
-  font-size: 0.9375rem;
-  line-height: 1.4375; 
-}
-
-footer a {
-  color: #fff;
-}
-
-span[class^="footer__social--links--"] {
-  top: 2px;
-  margin-right: 20px;
-}
-
-span[class^="footer__social--links"]:last-child {
-  margin-right: 0;
-}
-
-.footer__contact::after {
-  content: "|";
-  margin: 0 20px;
-}
-
-span[class^="footer__social--links"] a {
-  display: inline-block;
-}
-
-.footer__social--links--facebook a {
-  width: 8px;
-  height: 14px;
-}
-
-.footer__social--links--twitter a {
-  width: 14px;
-  height: 11px;
-}
-
-
-.footer__social--links--instagram a {
-  width: 14px;
-  height: 13px;
-}
 
 
 
@@ -468,7 +151,7 @@ span[class^="footer__social--links"] a {
 }
 
 #header__logo {
-  margin-top: 80px;
+//  margin-top: 80px;
 }
 
 .callstoaction__text {
@@ -604,10 +287,10 @@ div[id^="social__contacts--"] {
 }
 
 #header__logo {
-  margin: 7% 0 7% 7%;
+//  margin: 7% 0 7% 7%;
   position: relative;
   text-align: left;
-  width: 56.5%; /* makes it high enough to force social icons to fit */
+//  width: 56.5%; /* makes it high enough to force social icons to fit */
 }
 
 #header__logo img {
@@ -633,86 +316,7 @@ li[class^="header__social--links"] {
   bottom: 0;
 }
 
-#nav__head {
-  color: #fff;
-  display: none;
-  font-family: "Montserrat","Arial",sans-serif;
-  font-style: normal;
-  margin-right: 3%;
-  position: absolute;
-  right: 0;
-  text-transform: uppercase;
-  top: -12px;
-}
 
-.no-js #nav__head {
-  visibility: hidden;
-}
-
-#nav__head.closed {
-  display: block;
-}
-
-#nav__head::after {
-  content: '';
-  background: transparent url("../graphics/sprite-94x77.png") no-repeat -1px -12px;
-  display: inline-block;
-  height: 1.5rem;
-  margin-left: 10px;
-  position: relative;
-  top: 6px;
-  width: 1.5rem;
-}
-
-.no-js #nav__list {
-  top: -4px;
-}
-
-#nav__list {
-  background-color: rgba(0,0,0,0.3);
-  display: block;
-  float: right;
-  padding: 4px;
-  position: absolute;
-  right: 3%;
-  top: 24px;
-  z-index: 30;
-  margin-top: 0;
-  margin-bottom: 0;
-  border: 0;
-  border-radius: 4px;
-  white-space: nowrap;
-}
-
-.no-js #nav__list {
-  top: -4px;
-}
-
-.js #nav__list.closed {
-  display: none;
-}
-
-#nav__list li {
-  display: block;
-  border: 0;
-  margin: 4px 0;
-  padding: 0 4px;
-  text-align: right;
-  width: auto;
-  font-size: 0.9rem;
-}
-
-.no-js #nav__list li.social-link {
-  display: block;
-}
-
-#nav__list li:first-child {
-  margin-left: 0;
-}
-
-#nav__list a {
-  margin: 0;
-}
 
 #introduction h1 {
   margin: 0 5%;

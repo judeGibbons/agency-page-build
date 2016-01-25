@@ -1,0 +1,53 @@
+footer {
+  position: relative;
+  clear: both;
+}
+
+footer p {
+  font-family: "Montserrat", "Arial", "sans-serif";
+  font-weight: normal;
+  font-style: normal;
+  color: #fff;
+  padding-top: 32px;
+  border-top: 4px double #fff;
+  font-size: 0.9375rem;
+  line-height: 1.4375; 
+}
+
+footer a {
+  color: #fff;
+}
+
+span[class^="footer__social--links--"] {
+  top: 2px;
+  margin-right: 20px;
+}
+
+span[class^="footer__social--links"]:last-child {
+  margin-right: 0;
+}
+
+.footer__contact::after {
+  content: "|";
+  margin: 0 20px;
+}
+
+span[class^="footer__social--links"] a {
+  display: inline-block;
+}
+
+.footer__social--links--facebook a {
+  width: 8px;
+  height: 14px;
+}
+
+.footer__social--links--twitter a {
+  width: 14px;
+  height: 11px;
+}
+
+
+.footer__social--links--instagram a {
+  width: 14px;
+  height: 13px;
+}
