@@ -1,35 +1,38 @@
-#nav__head {
+.menu--head {
   display: none;
 }
 
-#nav__list {
-  position: relative;
-  top: -79px;
-  text-align: right;
+//.menu-primary--layout <-- make a surrounding div and call it this? check his code
+.menu-prim__list {
+
 //  border-top: 2px solid #fff;
 //  border-bottom: 2px solid #fff;
 //  margin-bottom: 57px;
 }
 
-#nav__list li {
+
+//.menu-primary__item <-- use this OR use direct child >
+.menu-prim__item {
   display: inline-block;
   //font-weight: normal;
   font-size: 1rem;
   //width: 15%;
   //margin: 18px 0.8%;
   //border-radius: 4px;
-  font-style: normal;
-  text-align: center;
+  //font-style: normal;
+  text-align: left;
   color: #333;
-  margin-right: 6px;
+  margin-right: 6px; //?
 }
 
 
-#nav__list li ul {
+.menu-sec__list { //may need to put menu-prim back in front?
   display: none;
+  position: absolute;
+  z-index: 10;
 }
 
-#nav__list li:hover ul {
+.menu-prim__item:hover .menu-sec__list {
   display: block;
 }
 
@@ -51,18 +54,18 @@
   color: #fff;
   font-weight: normal;
 }
-*/
+
 #nav__list li, li[class^="header__social--links"], .social__contacts button {
   background-color: transparent;
   transition: background .1s ease-in;
 }
 
 #nav__list li:hover, li[class^="header__social--links"]:hover, .social__contacts button:hover {
-  background-color: rgb(75,90,98); /* rgb for IE8 */
-  background-color: rgba(255,255,255,0.3); /* opacity on rollover */
+  background-color: rgb(75,90,98); /* rgb for IE8 
+  background-color: rgba(255,255,255,0.3); /* opacity on rollover 
   transition: background .1s ease-in;
 }
-
+*/
 
 
 
@@ -76,10 +79,10 @@
 
 
 
-#nav__head {
+.nav--head {
   color: #fff;
   display: none;
-  font-family: "Montserrat","Arial",sans-serif;
+  font-family: $sans-font-stack;
   font-style: normal;
   margin-right: 3%;
   position: absolute;
@@ -88,15 +91,15 @@
   top: -12px;
 }
 
-.no-js #nav__head {
+.no-js .nav--head {
   visibility: hidden;
 }
 
-#nav__head.closed {
+.nav--head.closed {
   display: block;
 }
 
-#nav__head::after {
+.nav--head::after {
   content: '';
   background: transparent url("../graphics/sprite-94x77.png") no-repeat -1px -12px;
   display: inline-block;
@@ -107,11 +110,11 @@
   width: 1.5rem;
 }
 
-.no-js #nav__list {
+.no-js .menu-prim__list {
   top: -4px;
 }
 
-#nav__list {
+.menu-prim__list {
   background-color: rgba(0,0,0,0.3);
   display: block;
   float: right;
@@ -127,15 +130,15 @@
   white-space: nowrap;
 }
 
-.no-js #nav__list {
+.no-js .menu-prim__list {
   top: -4px;
 }
 
-.js #nav__list.closed {
+.js .menu-prim__list.closed {
   display: none;
 }
 
-#nav__list li {
+.menu-prim__item {
   display: block;
   border: 0;
   margin: 4px 0;
@@ -145,15 +148,15 @@
   font-size: 0.9rem;
 }
 
-.no-js #nav__list li.social-link {
-  display: block;
-}
+//.no-js #nav__list li.social-link {
+//  display: block;
+//}
 
-#nav__list li:first-child {
+.menu-prim__item:first-child {
   margin-left: 0;
 }
 
-#nav__list a {
+.menu-prim__item a {
   margin: 0;
 }
 

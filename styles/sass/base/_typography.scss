@@ -1,19 +1,19 @@
-body {
-  font-family: "Volkhov", "Palatino", serif;
-  font-size: 1.125rem;
-  line-height: 1.5rem;
-  text-align: center;
-  font-style: italic;
+body { //do i need this? add to content divs?
+  font-family: $serif-font-stack;
+  font-size: 1.125rem; //18px - put in variables
+  line-height: 1.5; //24px
+  //text-align: center;
+  //font-style: italic;
 }
 
-h1, h2, h3, h4, h5, h6, #nav__list li {
-  font-family: "Montserrat", "Arial", sans-serif;
+h1, h2, h3, h4, h5, h6, .menu-prim__item {
+  font-family: $sans-font-stack;
   font-weight: bold;
-  font-style: normal;
   text-transform: uppercase;
 }
 
-#nav__list a, .callstoaction__click a, footer a {
+
+.menu-prim__item a, .callstoaction__click a, footer a { //first one picks up 2 levels deliberately
   text-decoration: none;
 }
 

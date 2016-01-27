@@ -7,6 +7,18 @@ header {
   background-position: 0 0;
 }
 
-#header__logo {
+.header__logo {
   text-align: left; 
+}
+
+.menu-layout {
+  position: relative;
+  top: -82px;
+  text-align: center;
+}
+
+.header-social-layout {
+  position: absolute;
+  top: 20px;
+  right: 0;
 }

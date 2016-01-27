@@ -73,16 +73,23 @@ li.carousel__slide.active {
 
 //<li class="carousel__slide slide1"><p class="carousel__caption">Why?</p><img src="390.jpg"></li>
 
-.carousel__caption a::after {
+.carousel__caption a { //not like this!!
   //position: relative;
   //max-width: 66%;
   //max-width: 1240px;
   //background-color: #666;
-  content: 'read more >';
   white-space: nowrap;
-  font-size: 1.5rem;
+  font-size: 0.5em; //<-- need to set this on caption
   margin-left: 10px;
   font-style: italic;
+}
+
+.carousel__caption a::after { //not like this!!
+  //position: relative;
+  //max-width: 66%;
+  //max-width: 1240px;
+  //background-color: #666;
+  content: '>>';
 }
 
 /*
