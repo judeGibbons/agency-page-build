@@ -92,6 +92,11 @@ li.carousel__slide.active {
   content: '>>';
 }
 
+
+#carousel, #introduction {
+  display: none; //TEMP TO HIDE IT!!
+  }
+
 /*
 .carousel__indicator__container {
   position: absolute;

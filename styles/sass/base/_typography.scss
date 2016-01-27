@@ -12,10 +12,19 @@ h1, h2, h3, h4, h5, h6, .menu-prim__item {
   text-transform: uppercase;
 }
 
+a, a:link {color: inherit; font-weight: bold;}
+a:visited {color: inherit;}
+a:hover, a:focus {color: red;}
+a:active {color: yellow;}
+
+
 
 .menu-prim__item a, .callstoaction__click a, footer a { //first one picks up 2 levels deliberately
   text-decoration: none;
 }
+
+
+
 
 h1 {
   color: #000;

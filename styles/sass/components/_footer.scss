@@ -3,6 +3,8 @@ footer {
   clear: both;
 }
 
+
+
 footer p {
   font-family: "Montserrat", "Arial", "sans-serif";
   font-weight: normal;
@@ -34,6 +36,11 @@ span[class^="footer__social--links"]:last-child {
 
 span[class^="footer__social--links"] a {
   display: inline-block;
+}
+
+span#footer__social--links { 
+  display: inline-block;
+  position: relative;
 }
 
 .footer__social--links--facebook a {

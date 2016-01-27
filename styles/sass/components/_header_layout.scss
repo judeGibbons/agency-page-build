@@ -8,17 +8,41 @@ header {
 }
 
 .header__logo {
-  text-align: left; 
+  text-align: left;
+  img {
+    display: block; 
+  } 
 }
 
 .menu-layout {
   position: relative;
-  top: -82px;
+  top: -73px;
   text-align: center;
 }
 
 .header-social-layout {
   position: absolute;
-  top: 20px;
+  top: 44px;
   right: 0;
 }
+
+.header-social__item {
+  float: left;
+  width: 30px;
+  height: 30px;
+  margin-right: 20px;
+  @media screen and (max-width: $break-fullwidth) {
+  //@include more-than-max-width { //this doesn't work
+  //@media #{$less-than-max-width} { //this doesn't work either
+    margin-right: 10px;
+  }
+}
+
+.header-social__item:last-child {
+  margin-right: 0px;
+  @media screen and (max-width: $break-fullwidth) {
+  //@media #{$less-than-max-width} {
+    margin-right: 10px;
+  }
+}
+//$more-than-max-width: "only screen and (min-width : $break-fullwidth)";

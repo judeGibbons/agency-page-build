@@ -1,6 +1,36 @@
+//colours
 $main-colour: #248039;
 $bg-col: #ffffff;
 $text-on-dark-bg: #ffffff;
-$text-on-light-bg: #000000;
+$text-on-light-bg: #000000; //change to a grey?
+$rollover-col: #ffffff;
+
+$midgreen: #71b5a6;
+$limegreen: #c6db45;
+$orange: #f89f59;
+$lightpurple: #c1bfd8;
+//should these be named 'highlight', 'background' etc?
+
+//fonts
 $sans-font-stack: "Montserrat", "Arial", sans-serif;
 $serif-font-stack: "Volkhov", "Palatino", serif;
+
+//columns for mixins
+
+
+//breakpoints - should these be pixels so as to prevent rounding errors?
+$break-fullwidth: 77.5rem; //1240px
+$break-tablet: 55rem; //880px
+
+
+$more-than-max-width: "screen and (min-width : #{$break-fullwidth}) and (min-device-width : #{$break-fullwidth})";
+$less-than-max-width: "screen and (max-width : #{$break-fullwidth}";
+
+/*
+@mixin more-than-max-width {
+  @media (screen and (min-width: #{$break-fullwidth})) {
+    @content;
+  }
+}
+*/
+//https://css-tricks.com/approaches-media-queries-sass/

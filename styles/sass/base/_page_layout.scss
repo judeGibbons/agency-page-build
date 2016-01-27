@@ -10,11 +10,17 @@ body {
   background-color: $main-colour; //remove this
 }
 
+header, main, footer {
+  background-color: $bg-col;
+}
+
+main .container {border: 1px solid black;} //TEMP
+
 .container {
   position: relative;
   margin: 0 auto;
   padding: 0 10px;
-  max-width: 77.5rem; /* full width based on 1240px */
+  max-width: $break-fullwidth;
 }
 
 .clearfix:after {
