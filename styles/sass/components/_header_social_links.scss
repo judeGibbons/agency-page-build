@@ -6,44 +6,44 @@
   border: 2px solid $midgreen;
   border-radius: 20px;
   text-align: center;
-  background-color: rgba($rollover-col,0.3);
+  background-color: rgba($bg-col,0.8);
   transition: background .1s ease-in;
   img {
     position: relative;
   }
   a {
     display: block;
-    width: 30px;
-    height: 30px;
+    width: 26px;
+    height: 26px;
   }
 }
 
 .header-social__item:hover {
-  background-color: rgba($rollover-col,0.8); /* opacity on rollover */
+  background-color: rgba($rollover-col,0.3);
   transition: background .1s ease-in;
 }
 
 
 .header-social__item.facebook img {
-  top: 3px;
-  left: -2px;
+  top: 2px;
+  left: 8px;
 }
 
 .header-social__item.twitter img {
-  top: 3px;
-  left: -1px;
+  top: 5px;
+  left: 3px;
 }
 
 .header-social__item.pinterest img {
   top: 3px;
-  right: 2px;
+  right: -5px;
 }
 
 .header-social__item.linkedin img {
   top: 3px;
-  right: 1px;
+  right: -5px;
 }
 
 .header-social__item.creativebrief img {
-  top: 2px;
+  top: 8px;
 }

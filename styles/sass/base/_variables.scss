@@ -1,14 +1,16 @@
 //colours
 $main-colour: #248039;
 $bg-col: #ffffff;
-$text-on-dark-bg: #ffffff;
-$text-on-light-bg: #000000; //change to a grey?
-$rollover-col: #ffffff;
+$text-on-dark-bg: #cccccc;
+$text-on-light-bg: #333333; //change to a grey?
+$rollover-col: #c1bfd8;
 
 $midgreen: #71b5a6;
 $limegreen: #c6db45;
 $orange: #f89f59;
 $lightpurple: #c1bfd8;
+$darkorange: #df8f50;
+
 //should these be named 'highlight', 'background' etc?
 
 //fonts
@@ -21,6 +23,7 @@ $serif-font-stack: "Volkhov", "Palatino", serif;
 //breakpoints - should these be pixels so as to prevent rounding errors?
 $break-fullwidth: 77.5rem; //1240px
 $break-tablet: 55rem; //880px
+$break-mobile: 35rem; //880px
 
 
 $more-than-max-width: "screen and (min-width : #{$break-fullwidth}) and (min-device-width : #{$break-fullwidth})";

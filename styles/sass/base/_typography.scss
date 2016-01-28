@@ -6,30 +6,25 @@ body { //do i need this? add to content divs?
   //font-style: italic;
 }
 
-h1, h2, h3, h4, h5, h6, .menu-prim__item {
+h1, h2, h3, h4, h5, h6 {
   font-family: $sans-font-stack;
   font-weight: bold;
   text-transform: uppercase;
-}
-
-a, a:link {color: inherit; font-weight: bold;}
-a:visited {color: inherit;}
-a:hover, a:focus {color: red;}
-a:active {color: yellow;}
-
-
-
-.menu-prim__item a, .callstoaction__click a, footer a { //first one picks up 2 levels deliberately
-  text-decoration: none;
-}
-
-
-
-
-h1 {
   color: #000;
 }
 
+a, a:link {color: $orange; font-weight: bold;}
+a:visited {color: $darkorange;}
+a:hover, a:focus {color: $orange;}
+a:active {color: $orange;}
+
+
+header {
+  a, a:link {color: $text-on-light-bg; text-decoration: none;}
+  a:visited {color: #000;}
+  a:hover, a:focus {color: $orange;}
+  a:active {color: $orange;}
+}
 
 
 #introduction h1 {

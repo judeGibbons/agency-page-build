@@ -9,10 +9,15 @@
 //  border-bottom: 2px solid #fff;
 //  margin-bottom: 57px;
 }
+.menu-prim__item {
 
+}
 
 //.menu-primary__item <-- use this OR use direct child >
 .menu-prim__item {
+  font-family: $sans-font-stack;
+  font-weight: bold;
+  text-transform: uppercase;
   display: inline-block;
   //font-weight: normal;
   font-size: 1rem;
@@ -21,19 +26,30 @@
   //border-radius: 4px;
   //font-style: normal;
   text-align: left;
-  color: #333;
+  color: $text-on-light-bg;
   margin-right: 6px; //?
 }
 
 
 .menu-sec__list { //may need to put menu-prim back in front?
   display: none;
+  text-transform: capitalize;
   position: absolute;
   z-index: 10;
+  padding: 4px;
+  border-radius: 2px;
+  background-color: rgba($lightpurple,0.8);
+  color: #fff;
 }
+//colour doesn't work when over dark image
 
 .menu-prim__item:hover .menu-sec__list {
   display: block;
+}
+
+
+.menu-sec__item {
+//  font-size: 0.8rem;
 }
 
 /*
@@ -67,7 +83,13 @@
 }
 */
 
+/* -->>> LESS THAN 900px <<<-- */
 
+@media only screen and (max-width: 56.25rem), only screen and (max-device-width: 56.25rem) {
+  
+
+
+}
 
 
 
@@ -115,7 +137,6 @@
 }
 
 .menu-prim__list {
-  background-color: rgba(0,0,0,0.3);
   display: block;
   float: right;
   padding: 4px;
@@ -126,7 +147,8 @@
   margin-top: 0;
   margin-bottom: 0;
   border: 0;
-  border-radius: 4px;
+  border-radius: 2px;
+  background-color: rgba($lightpurple,0.4);
   white-space: nowrap;
 }
 
