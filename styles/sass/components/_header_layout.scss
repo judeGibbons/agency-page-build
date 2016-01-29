@@ -9,60 +9,35 @@ header {
 
 .header__logo {
   text-align: left;
-  img {
-    display: block; 
-  } 
 }
 
 .menu-layout {
   position: relative;
-  top: -73px;
-  text-align: center;
-}
-
-
-
-.header-social-layout {
-  position: absolute;
-  top: 44px;
-  right: 0;
-}
-
-.header-social__item {
-  float: left;
-  width: 30px;
-  height: 30px;
-  margin-right: 20px;
-  @media screen and (max-width: $break-fullwidth) {
-  //@include more-than-max-width { //this doesn't work
-  //@media #{$less-than-max-width} { //this doesn't work either
-    margin-right: 10px;
-  }
-}
-
-.header-social__item:last-child {
-  margin-right: 0px;
-  @media screen and (max-width: $break-fullwidth) {
-  //@media #{$less-than-max-width} {
-    margin-right: 10px;
-  }
-}
-
-/* -->>> LESS THAN 900px <<<-- */
-
-@media only screen and (max-width: 56.25rem), only screen and (max-device-width: 56.25rem) {
+  top: -66px;
   
-.menu-layout {
-  position: relative;
-  top: -73px;
   text-align: right;
-}
+  margin-right: -4px; //margin minus padding on container - it's not abs pos so it recognises it
+  @include desktopplus {
+    top: -73px;
+    text-align: center;
+    margin-right: 10px; //maybe needs to come off mobile menu?
+  }
 
+  @include widescreenonly {
+    margin-right: 0px;
+  }
+}
 
 .header-social-layout {
   position: absolute;
   top: 12px;
   right: 0;
-}
-
+  margin-right: 20px;
+  @include desktopplus {
+    top: 44px;
+    margin-right: 10px; //maybe needs to come off default?
+  }
+  @include widescreenonly {
+    margin-right: 0px;
+  }
 }

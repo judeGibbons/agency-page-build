@@ -3,6 +3,9 @@
 }
 
 .header-social__item {
+  float: left;
+  width: 30px;
+  height: 30px;
   border: 2px solid $midgreen;
   border-radius: 20px;
   text-align: center;
@@ -16,13 +19,19 @@
     width: 26px;
     height: 26px;
   }
+  margin-right: 20px;
+  @include widescreenonly {
+    margin-right: 30px;
+  }
+  &:last-child {
+    margin-right: 0px;
+  }
 }
 
 .header-social__item:hover {
-  background-color: rgba($rollover-col,0.3);
+  background-color: rgba($rollover-bg,0.3);
   transition: background .1s ease-in;
 }
-
 
 .header-social__item.facebook img {
   top: 2px;

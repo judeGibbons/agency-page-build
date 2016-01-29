@@ -1,33 +1,66 @@
 //colours
-$main-colour: #248039;
-$bg-col: #ffffff;
-$text-on-dark-bg: #cccccc;
-$text-on-light-bg: #333333; //change to a grey?
-$rollover-col: #c1bfd8;
-
 $midgreen: #71b5a6;
 $limegreen: #c6db45;
 $orange: #f89f59;
 $lightpurple: #c1bfd8;
-$darkorange: #df8f50;
 
-//should these be named 'highlight', 'background' etc?
+$main-colour: $midgreen; //temp
+$bg-col: #ffffff;
+$text-on-dark-bg: #cccccc;
+$text-on-light-bg: #333333;
+$rollover-bg: $lightpurple;
+
+$link: $orange;
+$visited-link: #df8f50;
+$focus-active-link: #df8f50;
+
 
 //fonts
-$sans-font-stack: "Montserrat", "Arial", sans-serif;
-$serif-font-stack: "Volkhov", "Palatino", serif;
+$sans-font: "Montserrat", "Arial", sans-serif;
+$serif-font: "Volkhov", "Palatino", serif;
 
 //columns for mixins
 
 
 //breakpoints - should these be pixels so as to prevent rounding errors?
-$break-fullwidth: 77.5rem; //1240px
-$break-tablet: 55rem; //880px
-$break-mobile: 35rem; //880px
+$break-fullwidth: 77.5rem; //1240px;
+$break-midwidth: 64rem; //1024px;
+//$break-submidwidth: 50rem; //800px;
+$break-narrowwidth: 40rem; //560px;
 
 
-$more-than-max-width: "screen and (min-width : #{$break-fullwidth}) and (min-device-width : #{$break-fullwidth})";
-$less-than-max-width: "screen and (max-width : #{$break-fullwidth}";
+//$more-than-max-width: "screen and (min-width : #{$break-fullwidth}) and (min-device-width : #{$break-fullwidth})";
+//$less-than-max-width: "screen and (max-width : #{$break-fullwidth}";
+
+//$less-than-900px-width: "only screen and (max-width: $break-tablet), only screen and (max-device-width: $break-tablet)";
+
+
+
+@mixin tabletplus {  //this works
+  @media (min-width: #{$break-narrowwidth}) {
+    @content;
+  }
+}
+ 
+//@mixin largetabletplus {  //this works
+//  @media (min-width: #{$break-submidwidth}) {
+//    @content;
+//  }
+//}
+
+@mixin desktopplus {  //this works
+  @media (min-width: #{$break-midwidth}) {
+    @content;
+  }
+}
+
+
+@mixin widescreenonly {  //this works
+  @media (min-width: #{$break-fullwidth}) {
+    @content;
+  }
+}
+
 
 /*
 @mixin more-than-max-width {

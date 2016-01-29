@@ -1,23 +1,52 @@
-.menu--head {
+
+
+
+.menu-link--mobile {
+  color: $text-on-light-bg;
+  font-family: $sans-font;
+  position: absolute;
+  right: 0;
+  top: 0px;
+  text-transform: uppercase;
+  display: block;
+  @include tabletplus {
+    display: none;
+  }
+}
+
+
+.menu-link--mobile:after { //need to create menu icon
+  content: '';
+  background: transparent url("../graphics/sprite-94x77.png") no-repeat -1px -12px;
+  display: inline-block;
+  height: 1rem;
+  width: 1.5rem;
+  margin: 0 20px 0 10px;
+  position: relative;
+  top: 1px;
+  background-color: blue; //TEMP
+}
+
+
+.no-js {
+  &.menu-link--mobile { //never show MENU when no js - just open menu
+    display: none;
+  }
+  &.menu-prim__list { //position list without MENU
+    top: -4px;
+  }
+}
+
+
+
+.js .menu-prim__list.closed { //hide dropdown menu when closed
   display: none;
 }
 
-//.menu-primary--layout <-- make a surrounding div and call it this? check his code
-.menu-prim__list {
 
-//  border-top: 2px solid #fff;
-//  border-bottom: 2px solid #fff;
-//  margin-bottom: 57px;
-}
+
+
 .menu-prim__item {
-
-}
-
-//.menu-primary__item <-- use this OR use direct child >
-.menu-prim__item {
-  font-family: $sans-font-stack;
-  font-weight: bold;
-  text-transform: uppercase;
   display: inline-block;
   //font-weight: normal;
   font-size: 1rem;
@@ -27,8 +56,14 @@
   //font-style: normal;
   text-align: left;
   color: $text-on-light-bg;
-  margin-right: 6px; //?
+  margin-right: 6px;
+  &:last-child {
+    margin-right: 0px;
+  }
 }
+
+
+
 
 
 .menu-sec__list { //may need to put menu-prim back in front?
@@ -38,7 +73,7 @@
   z-index: 10;
   padding: 4px;
   border-radius: 2px;
-  background-color: rgba($lightpurple,0.8);
+  background-color: rgba($rollover-bg,0.8);
   color: #fff;
 }
 //colour doesn't work when over dark image
@@ -48,9 +83,8 @@
 }
 
 
-.menu-sec__item {
-//  font-size: 0.8rem;
-}
+
+
 
 /*
 #nav__list li.social-link {
@@ -83,65 +117,48 @@
 }
 */
 
-/* -->>> LESS THAN 900px <<<-- */
+/* -->>> LESS THAN 900px <<<-- 
 
-@media only screen and (max-width: 56.25rem), only screen and (max-device-width: 56.25rem) {
+this works
+
+@media only screen and (max-width: $break-tablet), only screen and (max-device-width: $break-tablet) {
   
-
-
+.menu-prim__item {
+  display: none;
 }
 
+}
+*/
 
 
-/* -->>> LESS THAN 560px <<<-- */
+/*this works
+.menu-prim__itemx {
+  @include tablet { //when more than, not less than
+    display: none;
+  }
+}*/
+
+
+/* -->>> LESS THAN 616px <<<-- */
 /*   instigates mobile layout  */
 
-@media only screen and (max-width: 35rem), only screen and (max-device-width: 35rem) {
+@media only screen and (max-width: 40rem), only screen and (max-device-width: 40rem) {
 
 
 
 
-.nav--head {
-  color: #fff;
-  display: none;
-  font-family: $sans-font-stack;
-  font-style: normal;
-  margin-right: 3%;
-  position: absolute;
-  right: 0;
-  text-transform: uppercase;
-  top: -12px;
-}
 
-.no-js .nav--head {
-  visibility: hidden;
-}
 
-.nav--head.closed {
-  display: block;
-}
 
-.nav--head::after {
-  content: '';
-  background: transparent url("../graphics/sprite-94x77.png") no-repeat -1px -12px;
-  display: inline-block;
-  height: 1.5rem;
-  margin-left: 10px;
-  position: relative;
-  top: 6px;
-  width: 1.5rem;
-}
 
-.no-js .menu-prim__list {
-  top: -4px;
-}
+
 
 .menu-prim__list {
   display: block;
   float: right;
   padding: 4px;
   position: absolute;
-  right: 3%;
+  right: 20px;
   top: 24px;
   z-index: 30;
   margin-top: 0;
@@ -152,13 +169,8 @@
   white-space: nowrap;
 }
 
-.no-js .menu-prim__list {
-  top: -4px;
-}
 
-.js .menu-prim__list.closed {
-  display: none;
-}
+
 
 .menu-prim__item {
   display: block;

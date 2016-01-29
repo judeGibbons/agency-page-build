@@ -1,31 +1,35 @@
 body { //do i need this? add to content divs?
-  font-family: $serif-font-stack;
+  font-family: $sans-font;
   font-size: 1.125rem; //18px - put in variables
   line-height: 1.5; //24px
-  //text-align: center;
-  //font-style: italic;
 }
 
 h1, h2, h3, h4, h5, h6 {
-  font-family: $sans-font-stack;
   font-weight: bold;
   text-transform: uppercase;
-  color: #000;
+  color: $text-on-light-bg;
 }
 
-a, a:link {color: $orange; font-weight: bold;}
-a:visited {color: $darkorange;}
-a:hover, a:focus {color: $orange;}
-a:active {color: $orange;}
+a, a:link {color: $link; font-weight: bold;}
+a:visited {color: $visited-link;}
+a:hover, a:focus, a:active {color: $focus-active-link;}
 
 
 header {
   a, a:link {color: $text-on-light-bg; text-decoration: none;}
-  a:visited {color: #000;}
+  a:visited {color: $text-on-light-bg;}
   a:hover, a:focus {color: $orange;}
   a:active {color: $orange;}
 }
 
+.menu-layout {
+  font-size: 0.9em;
+  font-weight: bold;
+  text-transform: uppercase;
+  @include tabletplus {
+    font-size: 1em;
+  }
+}
 
 #introduction h1 {
   font-size: 2.5rem;
