@@ -49,7 +49,7 @@ $break-narrowwidth: 40rem; //560px;
   $calcWidth: ((100% - (($numPerRow - 1) * $margin)) / $numPerRow);
  
   /* hardcoded here, but would be pulled through from somewhere (php?) */
-  $numberOfLinks: 15;
+  
     //.articlelinks__block {
     width: $calcWidth;
     height: 0;
@@ -66,3 +66,18 @@ $break-narrowwidth: 40rem; //560px;
   //$containerHeight: (floor($numberOfLinks / $numPerRow) * $calcWidth); 
 }
 
+@mixin heightCalcs($numPerRow, $margin) {
+  $numberOfLinks: 12;
+  $calcWidth: ((100% - (($numPerRow - 1) * $margin)) / $numPerRow);
+
+  $calcHeight: ((floor($numberOfLinks / $numPerRow)) * $calcWidth);
+ 
+  /* hardcoded here, but would be pulled through from somewhere (php?) */
+
+   height: $calcHeight;
+
+   @debug "#{$calcWidth}, #{$numPerRow}, #{$calcHeight}";
+
+  //}
+  //$containerHeight: (floor($numberOfLinks / $numPerRow) * $calcWidth); 
+}

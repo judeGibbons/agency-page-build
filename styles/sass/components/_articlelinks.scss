@@ -1,40 +1,65 @@
 .articlelinks {
+  @include heightCalcs(2, 4%);
+  
+  @include tabletplus {
+    @include heightCalcs(4, 3%);
+  }
+  
+  @include desktopplus {
+    @include heightCalcs(5, 2%);
+  }
+
+  @include widescreenonly {
+    @include heightCalcs(6, 1%);
+  }
+
+  overflow: hidden;
+   background-color: $main-colour;
 
 
 }
   .articlelinks__block {
 
-   background-color: $bg-col;
-    padding: 10px;
+   position: relative;
+    //padding: 10px;
     float: left;
     overflow: hidden;
 
-  @include rowCalcs(2, 6%);
+  @include rowCalcs(2, 4%);
   
   @include tabletplus {
-    @include rowCalcs(3, 4%);
+    @include rowCalcs(4, 3%);
   }
   
   @include desktopplus {
-    @include rowCalcs(4, 3%);
-  }
-
-  @include widescreenonly {
     @include rowCalcs(5, 2%);
   }
 
- 
+  @include widescreenonly {
+    @include rowCalcs(6, 1%);
+  }
+
+    background-color: $bg-col;
+
     
     img {
       width: 100%; /*this stretches pic, use srcset*/
     }
   }
 
-    //height: $containerHeight;
 
+.articlelinks__caption {
+  position: absolute;
+  top: 10px;
+  padding: 4px;
 
-
-
+  .lightpic + & {
+    color: $text-on-light-bg;
+  }
+  .darkpic + & {
+    color: $text-on-dark-bg;
+  }
+}
 /*
 .articlelinks__block {
 

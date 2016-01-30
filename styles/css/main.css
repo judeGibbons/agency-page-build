@@ -438,34 +438,40 @@ li[class^="carousel__indicator"]:last-child {
 
 
 */
+.articlelinks {
+  /* hardcoded here, but would be pulled through from somewhere (php?) */
+  height: 288%;
+  overflow: hidden;
+  background-color: #71b5a6; }
+  @media (min-width: 40rem) {
+    .articlelinks {
+      /* hardcoded here, but would be pulled through from somewhere (php?) */
+      height: 68.25%; } }
+  @media (min-width: 64rem) {
+    .articlelinks {
+      /* hardcoded here, but would be pulled through from somewhere (php?) */
+      height: 36.8%; } }
+  @media (min-width: 77.5rem) {
+    .articlelinks {
+      /* hardcoded here, but would be pulled through from somewhere (php?) */
+      height: 31.66667%; } }
+
 .articlelinks__block {
-  background-color: #ffffff;
-  padding: 10px;
+  position: relative;
   float: left;
   overflow: hidden;
   /* hardcoded here, but would be pulled through from somewhere (php?) */
-  width: 47%;
+  width: 48%;
   height: 0;
-  padding-bottom: 47%; }
+  padding-bottom: 48%;
+  background-color: #ffffff; }
   .articlelinks__block:nth-child(n) {
-    margin-bottom: 6%;
-    margin-right: 6%; }
+    margin-bottom: 4%;
+    margin-right: 4%; }
   .articlelinks__block:nth-child(2n) {
     margin-right: 0;
     margin-bottom: 0; }
   @media (min-width: 40rem) {
-    .articlelinks__block {
-      /* hardcoded here, but would be pulled through from somewhere (php?) */
-      width: 30.66667%;
-      height: 0;
-      padding-bottom: 30.66667%; }
-      .articlelinks__block:nth-child(n) {
-        margin-bottom: 4%;
-        margin-right: 4%; }
-      .articlelinks__block:nth-child(3n) {
-        margin-right: 0;
-        margin-bottom: 0; } }
-  @media (min-width: 64rem) {
     .articlelinks__block {
       /* hardcoded here, but would be pulled through from somewhere (php?) */
       width: 22.75%;
@@ -477,7 +483,7 @@ li[class^="carousel__indicator"]:last-child {
       .articlelinks__block:nth-child(4n) {
         margin-right: 0;
         margin-bottom: 0; } }
-  @media (min-width: 77.5rem) {
+  @media (min-width: 64rem) {
     .articlelinks__block {
       /* hardcoded here, but would be pulled through from somewhere (php?) */
       width: 18.4%;
@@ -489,9 +495,30 @@ li[class^="carousel__indicator"]:last-child {
       .articlelinks__block:nth-child(5n) {
         margin-right: 0;
         margin-bottom: 0; } }
+  @media (min-width: 77.5rem) {
+    .articlelinks__block {
+      /* hardcoded here, but would be pulled through from somewhere (php?) */
+      width: 15.83333%;
+      height: 0;
+      padding-bottom: 15.83333%; }
+      .articlelinks__block:nth-child(n) {
+        margin-bottom: 1%;
+        margin-right: 1%; }
+      .articlelinks__block:nth-child(6n) {
+        margin-right: 0;
+        margin-bottom: 0; } }
   .articlelinks__block img {
     width: 100%;
     /*this stretches pic, use srcset*/ }
+
+.articlelinks__caption {
+  position: absolute;
+  top: 10px;
+  padding: 4px; }
+  .lightpic + .articlelinks__caption {
+    color: #333333; }
+  .darkpic + .articlelinks__caption {
+    color: #cccccc; }
 
 /*
 .articlelinks__block {
