@@ -1,26 +1,68 @@
+.articlelinks {
 
-
-.news-projects--block {
-//  width: 
-//  height:
-  background-color: $orange;
-//  padding: 2%;
 
 }
+  .articlelinks__block {
 
-.news-projects--block {
-  width: ((100% - (3 * 2%)) / 4);
-  margin-right: 2%;
-  &:nth-child(4n) {
-    margin-right: 0;
+   background-color: $bg-col;
+    padding: 10px;
+    float: left;
+    overflow: hidden;
+
+  @include rowCalcs(2, 6%);
+  
+  @include tabletplus {
+    @include rowCalcs(3, 4%);
   }
-  //padding: 10px;
+  
+  @include desktopplus {
+    @include rowCalcs(4, 3%);
+  }
+
+  @include widescreenonly {
+    @include rowCalcs(5, 2%);
+  }
+
+ 
+    
+    img {
+      width: 100%; /*this stretches pic, use srcset*/
+    }
+  }
+
+    //height: $containerHeight;
+
+
+
+
+/*
+.articlelinks__block {
+
+  background-color: $bg-col;
+  padding: 10px;
   float: left;
+  overflow: hidden;
+
+  @include rowCalcs(2, 6%);
+  
+  @include tabletplus {
+    @include rowCalcs(3, 4%);
+  }
+  
+  @include desktopplus {
+    @include rowCalcs(4, 3%);
+  }
+
+  @include widescreenonly {
+    @include rowCalcs(5, 2%);
+  }
+  
   img {
-    //max-width: 100%;
-    width: 100%;
+    width: 100%; /*this stretches pic, use srcset
   }
 }
+
+*/
 
 
 //work out div height and remove overflow when there are some left over

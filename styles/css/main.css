@@ -438,18 +438,89 @@ li[class^="carousel__indicator"]:last-child {
 
 
 */
-.news-projects--block {
-  background-color: #f89f59; }
+.articlelinks__block {
+  background-color: #ffffff;
+  padding: 10px;
+  float: left;
+  overflow: hidden;
+  /* hardcoded here, but would be pulled through from somewhere (php?) */
+  width: 47%;
+  height: 0;
+  padding-bottom: 47%; }
+  .articlelinks__block:nth-child(n) {
+    margin-bottom: 6%;
+    margin-right: 6%; }
+  .articlelinks__block:nth-child(2n) {
+    margin-right: 0;
+    margin-bottom: 0; }
+  @media (min-width: 40rem) {
+    .articlelinks__block {
+      /* hardcoded here, but would be pulled through from somewhere (php?) */
+      width: 30.66667%;
+      height: 0;
+      padding-bottom: 30.66667%; }
+      .articlelinks__block:nth-child(n) {
+        margin-bottom: 4%;
+        margin-right: 4%; }
+      .articlelinks__block:nth-child(3n) {
+        margin-right: 0;
+        margin-bottom: 0; } }
+  @media (min-width: 64rem) {
+    .articlelinks__block {
+      /* hardcoded here, but would be pulled through from somewhere (php?) */
+      width: 22.75%;
+      height: 0;
+      padding-bottom: 22.75%; }
+      .articlelinks__block:nth-child(n) {
+        margin-bottom: 3%;
+        margin-right: 3%; }
+      .articlelinks__block:nth-child(4n) {
+        margin-right: 0;
+        margin-bottom: 0; } }
+  @media (min-width: 77.5rem) {
+    .articlelinks__block {
+      /* hardcoded here, but would be pulled through from somewhere (php?) */
+      width: 18.4%;
+      height: 0;
+      padding-bottom: 18.4%; }
+      .articlelinks__block:nth-child(n) {
+        margin-bottom: 2%;
+        margin-right: 2%; }
+      .articlelinks__block:nth-child(5n) {
+        margin-right: 0;
+        margin-bottom: 0; } }
+  .articlelinks__block img {
+    width: 100%;
+    /*this stretches pic, use srcset*/ }
 
-.news-projects--block {
-  width: 23.5%;
-  margin-right: 2%;
-  float: left; }
-  .news-projects--block:nth-child(4n) {
-    margin-right: 0; }
-  .news-projects--block img {
-    width: 100%; }
+/*
+.articlelinks__block {
 
+  background-color: $bg-col;
+  padding: 10px;
+  float: left;
+  overflow: hidden;
+
+  @include rowCalcs(2, 6%);
+  
+  @include tabletplus {
+    @include rowCalcs(3, 4%);
+  }
+  
+  @include desktopplus {
+    @include rowCalcs(4, 3%);
+  }
+
+  @include widescreenonly {
+    @include rowCalcs(5, 2%);
+  }
+  
+  img {
+    width: 100%; /*this stretches pic, use srcset
+  }
+}
+
+*/
 /* ====  CALLS TO ACTION ==== */
 #callstoaction {
   color: #fff; }
