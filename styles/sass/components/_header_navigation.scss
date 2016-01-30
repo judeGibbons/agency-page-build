@@ -1,6 +1,3 @@
-
-
-
 .menu-link--mobile {
   color: $text-on-light-bg;
   font-family: $sans-font;
@@ -12,146 +9,26 @@
   @include tabletplus {
     display: none;
   }
+  &:after { //need to create menu icon
+    content: '';
+    background: transparent url("../graphics/sprite-94x77.png") no-repeat -1px -12px;
+    display: inline-block;
+    height: 16px;
+    width: 24px;
+    margin: 0 20px 0 10px;
+    top: 1px;
+    background-color: blue; //TEMP
+  }
 }
-
-
-.menu-link--mobile:after { //need to create menu icon
-  content: '';
-  background: transparent url("../graphics/sprite-94x77.png") no-repeat -1px -12px;
-  display: inline-block;
-  height: 1rem;
-  width: 1.5rem;
-  margin: 0 20px 0 10px;
-  position: relative;
-  top: 1px;
-  background-color: blue; //TEMP
-}
-
 
 .no-js {
-  &.menu-link--mobile { //never show MENU when no js - just open menu
+  .menu-link--mobile { //never show MENU when no js - just open menu
     display: none;
   }
-  &.menu-prim__list { //position list without MENU
+  .menu-prim__list { //position list without MENU
     top: -4px;
   }
 }
-
-
-
-.js .menu-prim__list.closed { //hide dropdown menu when closed
-  display: none;
-}
-
-
-
-
-.menu-prim__item {
-  display: inline-block;
-  //font-weight: normal;
-  font-size: 1rem;
-  //width: 15%;
-  //margin: 18px 0.8%;
-  //border-radius: 4px;
-  //font-style: normal;
-  text-align: left;
-  color: $text-on-light-bg;
-  margin-right: 6px;
-  &:last-child {
-    margin-right: 0px;
-  }
-}
-
-
-
-
-
-.menu-sec__list { //may need to put menu-prim back in front?
-  display: none;
-  text-transform: capitalize;
-  position: absolute;
-  z-index: 10;
-  padding: 4px;
-  border-radius: 2px;
-  background-color: rgba($rollover-bg,0.8);
-  color: #fff;
-}
-//colour doesn't work when over dark image
-
-.menu-prim__item:hover .menu-sec__list {
-  display: block;
-}
-
-
-
-
-
-/*
-#nav__list li.social-link {
-  display: none;
-}
-
-#nav__list li:first-child {
-  margin-left: 0;
-}
-
-#nav__list li:last-child {
-  margin-right: 0;
-}
-
-
-#nav__list li a {
-  color: #fff;
-  font-weight: normal;
-}
-
-#nav__list li, li[class^="header__social--links"], .social__contacts button {
-  background-color: transparent;
-  transition: background .1s ease-in;
-}
-
-#nav__list li:hover, li[class^="header__social--links"]:hover, .social__contacts button:hover {
-  background-color: rgb(75,90,98); /* rgb for IE8 
-  background-color: rgba(255,255,255,0.3); /* opacity on rollover 
-  transition: background .1s ease-in;
-}
-*/
-
-/* -->>> LESS THAN 900px <<<-- 
-
-this works
-
-@media only screen and (max-width: $break-tablet), only screen and (max-device-width: $break-tablet) {
-  
-.menu-prim__item {
-  display: none;
-}
-
-}
-*/
-
-
-/*this works
-.menu-prim__itemx {
-  @include tablet { //when more than, not less than
-    display: none;
-  }
-}*/
-
-
-/* -->>> LESS THAN 616px <<<-- */
-/*   instigates mobile layout  */
-
-@media only screen and (max-width: 40rem), only screen and (max-device-width: 40rem) {
-
-
-
-
-
-
-
-
-
 
 .menu-prim__list {
   display: block;
@@ -160,38 +37,67 @@ this works
   position: absolute;
   right: 20px;
   top: 24px;
-  z-index: 30;
-  margin-top: 0;
-  margin-bottom: 0;
-  border: 0;
+  z-index: 10;
   border-radius: 2px;
-  background-color: rgba($lightpurple,0.4);
+  background-color: rgba($rollover-bg,0.4);
   white-space: nowrap;
+  @include tabletplus {
+    background-color: transparent;
+    position: relative;
+    float: none;
+    padding: none;
+    right: auto;
+    top: -5px;
+  }
 }
 
-
+.js .menu-prim__list.closed { //hide dropdown menu when closed
+  display: none;
+  @include tabletplus {
+    display: block;
+  }
+}
 
 
 .menu-prim__item {
   display: block;
+  position: relative;
   border: 0;
   margin: 4px 0;
   padding: 0 4px;
   text-align: right;
   width: auto;
-  font-size: 0.9rem;
+  @include tabletplus {
+    display: inline-block;
+    text-align: left;
+    margin-right: 6px;
+    &:last-child {
+      margin-right: 0px;
+    }
+  }
 }
 
-//.no-js #nav__list li.social-link {
-//  display: block;
-//}
-
-.menu-prim__item:first-child {
-  margin-left: 0;
+.menu-sec__list { //may need to put menu-prim back in front?
+  display: none;
+  text-transform: capitalize;
+  position: absolute;
+  z-index: 10;
+  padding: 4px;
+  border-radius: 2px;
+  background-color: rgba($rollover-bg,0.4);
+  right: 105%;
+  top: -4px;
+  @include tabletplus {
+    right: 0px;
+    top: 1.3em;
+    white-space: nowrap;
+  }
+  @include desktopplus {
+    left: 0px;
+  }
 }
 
-.menu-prim__item a {
-  margin: 0;
-}
 
-} //end of mobile breakpoint
+.menu-prim__item:hover .menu-sec__list {
+  display: table;
+}

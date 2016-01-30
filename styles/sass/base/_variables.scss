@@ -1,72 +1,45 @@
-//colours
+//COLOURS//
 $midgreen: #71b5a6;
 $limegreen: #c6db45;
 $orange: #f89f59;
 $lightpurple: #c1bfd8;
+
 
 $main-colour: $midgreen; //temp
 $bg-col: #ffffff;
 $text-on-dark-bg: #cccccc;
 $text-on-light-bg: #333333;
 $rollover-bg: $lightpurple;
-
 $link: $orange;
 $visited-link: #df8f50;
 $focus-active-link: #df8f50;
 
 
-//fonts
+//FONTS//
 $sans-font: "Montserrat", "Arial", sans-serif;
 $serif-font: "Volkhov", "Palatino", serif;
 
-//columns for mixins
 
-
-//breakpoints - should these be pixels so as to prevent rounding errors?
+//BREAKPOINTS//
 $break-fullwidth: 77.5rem; //1240px;
 $break-midwidth: 64rem; //1024px;
-//$break-submidwidth: 50rem; //800px;
 $break-narrowwidth: 40rem; //560px;
 
 
-//$more-than-max-width: "screen and (min-width : #{$break-fullwidth}) and (min-device-width : #{$break-fullwidth})";
-//$less-than-max-width: "screen and (max-width : #{$break-fullwidth}";
-
-//$less-than-900px-width: "only screen and (max-width: $break-tablet), only screen and (max-device-width: $break-tablet)";
-
-
-
-@mixin tabletplus {  //this works
+@mixin tabletplus {
   @media (min-width: #{$break-narrowwidth}) {
     @content;
   }
 }
- 
-//@mixin largetabletplus {  //this works
-//  @media (min-width: #{$break-submidwidth}) {
-//    @content;
-//  }
-//}
 
-@mixin desktopplus {  //this works
+@mixin desktopplus {
   @media (min-width: #{$break-midwidth}) {
     @content;
   }
 }
 
-
-@mixin widescreenonly {  //this works
+@mixin widescreenonly {
   @media (min-width: #{$break-fullwidth}) {
     @content;
   }
 }
-
-
-/*
-@mixin more-than-max-width {
-  @media (screen and (min-width: #{$break-fullwidth})) {
-    @content;
-  }
-}
-*/
-//https://css-tricks.com/approaches-media-queries-sass/

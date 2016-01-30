@@ -19,10 +19,9 @@ time, mark, audio, video {
   font: inherit;
   vertical-align: baseline;
 }
-/* HTML5 display-role reset for older browsers */
-/* I added img to this */
+//HTML5 display-role reset for older browsers, +img, main
 article, aside, details, figcaption, figure, 
-footer, header, hgroup, img, menu, nav, section {
+footer, header, hgroup, img, main, menu, nav, section {
   display: block;
 }
 body {
@@ -31,7 +30,7 @@ body {
 ol, ul {
   list-style: none;
 }
-/*chrome user stylesheet*/
+//chrome user stylesheet
 ul, menu, dir {
     display: block;
     -webkit-margin-before: 0px;

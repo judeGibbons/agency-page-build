@@ -17,13 +17,13 @@ header {
   
   text-align: right;
   margin-right: -4px; //margin minus padding on container - it's not abs pos so it recognises it
-  @include desktopplus {
+  @include tabletplus {
     top: -73px;
-    text-align: center;
-    margin-right: 10px; //maybe needs to come off mobile menu?
+    text-align: right;
+    margin-right: 10px;
   }
-
-  @include widescreenonly {
+  @include desktopplus {
+    text-align: center;
     margin-right: 0px;
   }
 }

@@ -6,17 +6,9 @@ html {
   box-sizing: inherit;
 }
 
-body {
-  background-color: $main-colour; //TEMP
-}
-main .container {border: 1px solid black;} //TEMP
-
-
-
 header, main, footer {
   background-color: $bg-col;
 }
-
 
 .container {
   position: relative;
@@ -34,10 +26,17 @@ header, main, footer {
   visibility: hidden;
 }
 
-body:before { //TEMP for testing width
+
+/* TEMP STYLES FOR DEV */
+
+body { background-color: $main-colour;}
+
+main .container {border: 1px solid black;}
+
+body:before { 
   display: block;
   width: 100%;
-  text-size: 0.3em;
+  font-size: 1em;
   line-height: 1;
   color: black;
   font-family: "Arial";
@@ -57,6 +56,8 @@ body:before { //TEMP for testing width
   }
 }
 
-#carousel, #introduction {//TEMP TO HIDE IT!!
+#carousel, #introduction {
   display: none; 
 }
+
+/* END OF TEMP STYLES FOR DEV */

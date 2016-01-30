@@ -23,11 +23,11 @@ header {
 }
 
 .menu-layout {
-  font-size: 0.9em;
+  font-size: 0.9rem;
   font-weight: bold;
   text-transform: uppercase;
   @include tabletplus {
-    font-size: 1em;
+    font-size: 1rem;
   }
 }
 
