@@ -58,6 +58,12 @@ h1, h2, h3, h4, h5, h6 {
   text-transform: uppercase;
   color: #333333; }
 
+.title, .em {
+  font-style: italic; }
+
+.strong {
+  font-weight: bold; }
+
 a, a:link {
   color: #f89f59;
   font-weight: bold; }
@@ -86,20 +92,27 @@ header a:active {
     .menu-layout {
       font-size: 1rem; } }
 
-#introduction h1 {
-  font-size: 2.5rem;
-  line-height: 1.125;
-  margin: 0 25%; }
-
-#introduction p {
-  margin: 16px 25% 0;
-  line-height: 1.3888; }
-
-.title, .em {
-  font-style: italic; }
-
-.strong {
-  font-weight: bold; }
+/*
+.introduction {
+  h1 {
+    font-size: 2.5rem;
+    line-height: 1.125;
+    margin: 0 25%;
+  }
+  p {
+    margin: 16px 25% 0;
+    line-height: 1.3888;
+  }
+} 
+*/
+.articlelinks__block p {
+  font-size: 0.7rem; }
+  @media (min-width: 28rem) {
+    .articlelinks__block p {
+      font-size: 0.9rem; } }
+  @media (min-width: 50rem) {
+    .articlelinks__block p {
+      font-size: 1rem; } }
 
 html {
   box-sizing: border-box; }
@@ -439,41 +452,24 @@ li[class^="carousel__indicator"]:last-child {
 
 */
 .articlelinks {
-  /* hardcoded here, but would be pulled through from somewhere (php?) */
-  height: 288%;
-  overflow: hidden;
   background-color: #71b5a6; }
-  @media (min-width: 40rem) {
-    .articlelinks {
-      /* hardcoded here, but would be pulled through from somewhere (php?) */
-      height: 68.25%; } }
-  @media (min-width: 64rem) {
-    .articlelinks {
-      /* hardcoded here, but would be pulled through from somewhere (php?) */
-      height: 36.8%; } }
-  @media (min-width: 77.5rem) {
-    .articlelinks {
-      /* hardcoded here, but would be pulled through from somewhere (php?) */
-      height: 31.66667%; } }
 
 .articlelinks__block {
   position: relative;
   float: left;
   overflow: hidden;
-  /* hardcoded here, but would be pulled through from somewhere (php?) */
-  width: 48%;
+  background-color: #ffffff;
+  width: 31.33333%;
   height: 0;
-  padding-bottom: 48%;
-  background-color: #ffffff; }
+  padding-bottom: 31.33333%; }
   .articlelinks__block:nth-child(n) {
-    margin-bottom: 4%;
-    margin-right: 4%; }
-  .articlelinks__block:nth-child(2n) {
+    margin-bottom: 3%;
+    margin-right: 3%; }
+  .articlelinks__block:nth-child(3n) {
     margin-right: 0;
     margin-bottom: 0; }
   @media (min-width: 40rem) {
     .articlelinks__block {
-      /* hardcoded here, but would be pulled through from somewhere (php?) */
       width: 22.75%;
       height: 0;
       padding-bottom: 22.75%; }
@@ -485,19 +481,17 @@ li[class^="carousel__indicator"]:last-child {
         margin-bottom: 0; } }
   @media (min-width: 64rem) {
     .articlelinks__block {
-      /* hardcoded here, but would be pulled through from somewhere (php?) */
-      width: 18.4%;
+      width: 15%;
       height: 0;
-      padding-bottom: 18.4%; }
+      padding-bottom: 15%; }
       .articlelinks__block:nth-child(n) {
         margin-bottom: 2%;
         margin-right: 2%; }
-      .articlelinks__block:nth-child(5n) {
+      .articlelinks__block:nth-child(6n) {
         margin-right: 0;
         margin-bottom: 0; } }
   @media (min-width: 77.5rem) {
     .articlelinks__block {
-      /* hardcoded here, but would be pulled through from somewhere (php?) */
       width: 15.83333%;
       height: 0;
       padding-bottom: 15.83333%; }
@@ -514,40 +508,27 @@ li[class^="carousel__indicator"]:last-child {
 .articlelinks__caption {
   position: absolute;
   top: 10px;
-  padding: 4px; }
+  left: 10px;
+  right: 10px; }
   .lightpic + .articlelinks__caption {
     color: #333333; }
   .darkpic + .articlelinks__caption {
     color: #cccccc; }
 
-/*
-.articlelinks__block {
+.articlelinks__date {
+  display: block; }
 
-  background-color: $bg-col;
-  padding: 10px;
-  float: left;
-  overflow: hidden;
+.articlelinks__readlink {
+  color: #f89f59;
+  position: absolute;
+  bottom: 10px;
+  left: 10px; }
+  .articlelinks__readlink:after {
+    content: '>';
+    position: relative;
+    left: 5px;
+    top: 2px; }
 
-  @include rowCalcs(2, 6%);
-  
-  @include tabletplus {
-    @include rowCalcs(3, 4%);
-  }
-  
-  @include desktopplus {
-    @include rowCalcs(4, 3%);
-  }
-
-  @include widescreenonly {
-    @include rowCalcs(5, 2%);
-  }
-  
-  img {
-    width: 100%; /*this stretches pic, use srcset
-  }
-}
-
-*/
 /* ====  CALLS TO ACTION ==== */
 #callstoaction {
   color: #fff; }

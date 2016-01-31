@@ -22,8 +22,10 @@ $serif-font: "Volkhov", "Palatino", serif;
 
 //BREAKPOINTS//
 $break-fullwidth: 77.5rem; //1240px;
-$break-midwidth: 64rem; //1024px;
+$break-desktopwidth: 64rem; //1024px;
+$break-midwidth: 50rem; //800px;
 $break-narrowwidth: 40rem; //560px;
+$break-narrowestwidth: 28rem; //448px;
 
 
 @mixin tabletplus {
@@ -33,7 +35,7 @@ $break-narrowwidth: 40rem; //560px;
 }
 
 @mixin desktopplus {
-  @media (min-width: #{$break-midwidth}) {
+  @media (min-width: #{$break-desktopwidth}) {
     @content;
   }
 }
@@ -44,40 +46,36 @@ $break-narrowwidth: 40rem; //560px;
   }
 }
 
+//these for text in articlelink blocks
+
+
+@mixin largermobile {
+  @media (min-width: #{$break-narrowestwidth}) {
+    @content;
+  }
+}
+
+@mixin midwidth {
+  @media (min-width: #{$break-midwidth}) {
+    @content;
+  }
+}
+
+
+
+
 //CALCULATING ROWS FOR BLOG/NEWS LINKS//
 @mixin rowCalcs($numPerRow, $margin) {
   $calcWidth: ((100% - (($numPerRow - 1) * $margin)) / $numPerRow);
- 
-  /* hardcoded here, but would be pulled through from somewhere (php?) */
-  
-    //.articlelinks__block {
-    width: $calcWidth;
-    height: 0;
-    padding-bottom: $calcWidth;
-    &:nth-child(n) {
-      margin-bottom: $margin;
-      margin-right: $margin;
-    }
-    &:nth-child(#{$numPerRow}n) {
-      margin-right: 0;
-      margin-bottom: 0;
-    }
-  //}
-  //$containerHeight: (floor($numberOfLinks / $numPerRow) * $calcWidth); 
-}
-
-@mixin heightCalcs($numPerRow, $margin) {
-  $numberOfLinks: 12;
-  $calcWidth: ((100% - (($numPerRow - 1) * $margin)) / $numPerRow);
-
-  $calcHeight: ((floor($numberOfLinks / $numPerRow)) * $calcWidth);
- 
-  /* hardcoded here, but would be pulled through from somewhere (php?) */
-
-   height: $calcHeight;
-
-   @debug "#{$calcWidth}, #{$numPerRow}, #{$calcHeight}";
-
-  //}
-  //$containerHeight: (floor($numberOfLinks / $numPerRow) * $calcWidth); 
+  width: $calcWidth;
+  height: 0;
+  padding-bottom: $calcWidth;
+  &:nth-child(n) {
+    margin-bottom: $margin;
+    margin-right: $margin;
+  }
+  &:nth-child(#{$numPerRow}n) {
+    margin-right: 0;
+    margin-bottom: 0;
+  }
 }

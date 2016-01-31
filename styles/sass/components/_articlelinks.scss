@@ -1,57 +1,37 @@
 .articlelinks {
-  @include heightCalcs(2, 4%);
-  
-  @include tabletplus {
-    @include heightCalcs(4, 3%);
-  }
-  
-  @include desktopplus {
-    @include heightCalcs(5, 2%);
-  }
-
-  @include widescreenonly {
-    @include heightCalcs(6, 1%);
-  }
-
-  overflow: hidden;
    background-color: $main-colour;
-
-
 }
-  .articlelinks__block {
+  
+.articlelinks__block {
+  position: relative;
+  float: left;
+  overflow: hidden;
+  background-color: $bg-col;
 
-   position: relative;
-    //padding: 10px;
-    float: left;
-    overflow: hidden;
-
-  @include rowCalcs(2, 4%);
+  @include rowCalcs(3, 3%);
   
   @include tabletplus {
     @include rowCalcs(4, 3%);
   }
   
   @include desktopplus {
-    @include rowCalcs(5, 2%);
+    @include rowCalcs(6, 2%);
   }
 
   @include widescreenonly {
     @include rowCalcs(6, 1%);
   }
-
-    background-color: $bg-col;
-
     
-    img {
-      width: 100%; /*this stretches pic, use srcset*/
-    }
+  img {
+    width: 100%; /*this stretches pic, use srcset*/
   }
-
+}
 
 .articlelinks__caption {
   position: absolute;
   top: 10px;
-  padding: 4px;
+  left: 10px;
+  right: 10px;
 
   .lightpic + & {
     color: $text-on-light-bg;
@@ -60,37 +40,26 @@
     color: $text-on-dark-bg;
   }
 }
-/*
-.articlelinks__block {
 
-  background-color: $bg-col;
-  padding: 10px;
-  float: left;
-  overflow: hidden;
-
-  @include rowCalcs(2, 6%);
-  
-  @include tabletplus {
-    @include rowCalcs(3, 4%);
-  }
-  
-  @include desktopplus {
-    @include rowCalcs(4, 3%);
-  }
-
-  @include widescreenonly {
-    @include rowCalcs(5, 2%);
-  }
-  
-  img {
-    width: 100%; /*this stretches pic, use srcset
-  }
+.articlelinks__date {
+  display: block;
 }
 
-*/
 
 
-//work out div height and remove overflow when there are some left over
+.articlelinks__readlink {
+  color: $link;
+  position: absolute;
+  bottom: 10px;
+  left: 10px;
+
+  &:after {
+    content: '>';
+    position: relative;
+    left: 5px;
+    top: 2px;
+  }
+}
 
 /* ====  CALLS TO ACTION ==== */
 
