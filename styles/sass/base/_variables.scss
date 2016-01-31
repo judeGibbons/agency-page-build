@@ -4,7 +4,6 @@ $limegreen: #c6db45;
 $orange: #f89f59;
 $lightpurple: #c1bfd8;
 
-
 $main-colour: $midgreen; //temp
 $bg-col: #ffffff;
 $text-on-dark-bg: #cccccc;
@@ -17,7 +16,9 @@ $focus-active-link: #df8f50;
 
 //FONTS//
 $sans-font: "Montserrat", "Arial", sans-serif;
-$serif-font: "Volkhov", "Palatino", serif;
+$serif-font: "Palatino", serif;
+$base-font-size: 1.125rem; //18px
+$base-line-height: 1.5; //24px
 
 
 //BREAKPOINTS//
