@@ -63,7 +63,22 @@ $break-narrowestwidth: 28rem; //448px;
 }
 
 
-
+//BACKGROUND INDICATION FOR LINKS
+@mixin linkbg {
+  &:hover::before {
+    content: '';
+    background-color: rgba($orange, 0.5);
+    padding: 2px 5px;
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 107%;
+    height: 100%;
+    display: inline-block;
+    border-radius: 6px;
+    z-index: 0;
+  }
+}
 
 //CALCULATING ROWS FOR BLOG/NEWS LINKS//
 @mixin rowCalcs($numPerRow, $margin) {

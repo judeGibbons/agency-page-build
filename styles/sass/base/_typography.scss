@@ -18,16 +18,15 @@ h1, h2, h3, h4, h5, h6 {
   font-weight: bold;
 }
 
+/*
 a, a:link {color: $link; font-weight: bold;}
 a:visited {color: $visited-link;}
 a:hover, a:focus, a:active {color: $focus-active-link;}
-
-
-header {
-  a, a:link {color: $text-on-light-bg; text-decoration: none;}
-  a:visited {color: $text-on-light-bg;}
-  a:hover, a:focus {color: $orange;}
-  a:active {color: $orange;}
+*/
+header, .carousel, .articlelinks {
+  a, a:link, a:visited, a:hover, a:focus, a:active {
+    color: inherit; text-decoration: none; font-weight: normal;
+  }
 }
 
 .menu-layout {
@@ -52,6 +51,25 @@ header {
 .social-block {
   font-family: $serif-font;
   font-size: 0.9rem;
+}
+
+.carousel__caption {
+  font-size: 1.5rem;
+ .carousel__readlink  {
+  font-size: 0.75rem;
+ }
+  @include tabletplus {
+    font-size: 2rem;
+    .carousel__readlink  {
+      font-size: 1rem;
+    }
+  }
+  @include desktopplus {
+    font-size: 2.5rem;
+    .carousel__readlink  {
+      font-size: 1.25rem;
+    }
+  }
 }
 
 .articlelinks__block {

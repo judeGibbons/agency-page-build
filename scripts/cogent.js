@@ -1,11 +1,10 @@
 document.addEventListener("DOMContentLoaded",init,false);
 
-
 function init() {
   addjsclass();
-  createClosedElementsArray();
-  addListenerToWindow();
-  if (document.getElementById('carousel')) {
+//  createClosedElementsArray();
+//  addListenerToWindow();
+  if (document.getElementById('carousel-js')) {
     carousel();
   }
 }
@@ -17,105 +16,21 @@ function addjsclass() {
 }
 
 
-//--->>>   MENU   <<<---//
-
-// adds event listener to window so it can toggle mobile menu, and can close menu when clicked elsewhere
-
-function addListenerToWindow() {
-  if (window.addEventListener) 
-    window.addEventListener('click', toggleMenu, false);
-  else if (window.attachEvent)
-    window.attachEvent('onclick', toggleMenu);
-};
-
-var closedElementsArray = [];
-var toggleContainer;
-
-function createClosedElementsArray() {
-  closedElementsArray = (Array.prototype.slice.call( document.getElementsByClassName('closed') )); // converts HTMLCollection to array
-  toggleContainer = closedElementsArray[1];
-}
-
-function toggleMenu(e) {
-  var closedClass = new RegExp("(^|\\s)closed(\\s|$)");
-  var openClass = new RegExp("(^|\\s)open(\\s|$)");
-  var navListArray = toggleContainer.getElementsByTagName('*'); 
-    function matchNavListItem() {
-    for (var i=0; i<navListArray.length; i++) {
-      if (e.target == navListArray[i]) {
-        return true;
-      };
-    };
-  };
-  matchNavListItem();
-  if (e.target == document.getElementById('nav__head')) {
-    if (closedClass.test(toggleContainer.className) ) {
-      toggleContainer.className = toggleContainer.className.replace(/(\s)closed/," open");
-    } else if (openClass.test(toggleContainer.className) ) {
-      toggleContainer.className = toggleContainer.className.replace(/(\s)open/," closed");
-    }
-    e.preventDefault();
-  } else if ( (e.target == toggleContainer.firstElementChild)||(matchNavListItem()) ) {
-    return;
-  } else if (openClass.test(toggleContainer.className) ) {
-    toggleContainer.className = toggleContainer.className.replace(/(\s)open/," closed");
-  };
-};
-
-
-
 //--->>> CAROUSEL <<<---//
 
 function carousel() {
   var imagesArray = [];
-  //make array of images
-  //if native css3 implementation works, use that to create array, else use js
 
   function getElementsByClassName(searchClass) {
-    if (document.getElementsByClassName) { // use native implementation
       imagesArray = (Array.prototype.slice.call( document.getElementsByClassName(searchClass) )); // converts HTMLCollection to array
       imagesArray[(imagesArray.length-2)].className += (" start");
-    } else { 
-      var allListItems = document.getElementsByTagName("li"),
-      allListItemsLength = allListItems.length,
-      pattern = new RegExp("(^|\\s)"+searchClass+"(\\s|$)"),
-      i,
-      j;
-
-      for (i = 0, j = 0; i < allListItemsLength; i++) {
-        if ( pattern.test(allListItems[i].className) ) {
-          imagesArray[j] = allListItems[i];
-          j++;
-
-        }
-      }
-    }
-    
-
-
-// create the correct number of carousel indicators
-/*
-   // var indicatorsArray =[];
-    var indicators = document.getElementById('carousel__indicator__list');
-    for (i=1, maxi = imagesArray.length+1; i<maxi; i++) {
-      var thisIndicator = document.createElement("li");
-      document.getElementById('carousel__indicator__list').appendChild(thisIndicator);
-      thisIndicator.className = "carousel__indicator indicator" + i;
-
-
-      //indicatorsArray.push(thisIndicator);
-    }
-    document.getElementsByClassName("indicator1")[0].className += (" start");
-*/
   }
-  
-  //  indicatorsArray[0].className += (" start");
-//  console.log("document.getElementsByClassName("indicator1")[0]");
+
   //use counter to create active and next classes on images in turn, and put active class on
   var activeImage;
   var nextImage;
   var counter;
-  var activeIndicator;
+
   function appendActiveClass() {
     counter = (imagesArray.length-1);
     var intervalTime = 5000;
@@ -126,35 +41,13 @@ function carousel() {
         imagesArray[i].className = imagesArray[i].className.replace(/(\s)next/,"");
         activeImage = imagesArray[(counter-1)%(imagesArray.length)];
         nextImage = imagesArray[(counter)%(imagesArray.length)];
- 
- /*       var makeIndicatorActive = function() {
-          return function() {
-            activeIndicator = document.getElementsByClassName("indicator" + (i+1))[0];
-          console.log("making indicator active")
-          }();
-          
-        };
-         makeIndicatorActive();
-
-          console.log(activeIndicator) // all of them; active only added once though
-
-*/
-
-              
-
       }
- 
- //         activeIndicator.className = activeIndicator.className.replace(/(\s)start/,"");
- //         activeIndicator.className += (" active");
-
 
       counter ++;
       activeImage.className += (" active");
       nextImage.className += (" next");
       imagesArray[(imagesArray.length)-2].className = imagesArray[(imagesArray.length)-2].className.replace(/(\s)start/,"");
-    
 
-    //check if css3 available, if not call fade
     function getSupportedTransform() {
         var prefixes = 'transform WebkitTransform MozTransform OTransform msTransform'.split(' ');
         for(var i = 0; i < prefixes.length; i++) {
@@ -170,8 +63,6 @@ function carousel() {
     }
   }
 
-    
-//should work for ie9 but doesn't   
   function fade(activeImage,nextImage) {
     var activeop = 1;
     var nextop = 0.01;
@@ -183,8 +74,6 @@ function carousel() {
       if ((imagesArray[i] !== (activeImage)) && (imagesArray[i] !== (nextImage))) {
         imagesArray[i].style.display = 'none';
         imagesArray[i].style.opacity = 0;
-        imagesArray[i].style.filter='progid:DXImageTransform.Microsoft.Alpha(Opacity=0)'; //IE8&9 only - detect user agent
-        imagesArray[i].style.filter = "alpha(opacity=0)";
     }
   }
   
@@ -194,24 +83,17 @@ function carousel() {
         clearInterval(timer);
       }
       activeImage.style.opacity = activeop;
-      activeImage.style.filter='progid:DXImageTransform.Microsoft.Alpha(Opacity=(activeop * 100))'; //IE8&9 only - detect user agent
-      activeImage.style.filter = 'alpha(opacity=' + activeop * 100 + ")"; //for ie
-      
-      
+
       activeop -= activeop * 0.15;
       if (nextop > 0.978) {
         clearInterval(timer);
       }
       nextImage.style.opacity = nextop;
-      nextImage.style.filter='progid:DXImageTransform.Microsoft.Alpha(Opacity=(nextop * 100))'; //IE8&9 only - detect user agent
-      nextImage.style.filter = 'alpha(opacity=' + nextop * 100 + ")"; //for ie
       nextop += 0.0313;
     }, 30);
   }
-      
-  //call functions
 
   getElementsByClassName("carousel__slide");
   appendActiveClass();
-  
+
 }

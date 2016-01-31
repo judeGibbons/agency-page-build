@@ -74,6 +74,9 @@
     &:last-child {
       margin-right: 0px;
     }
+    a {
+      @include linkbg;
+    }
   }
 }
 
@@ -97,6 +100,11 @@
   }
 }
 
+.menu-sec__item {
+    a {
+      @include linkbg;
+    }
+}
 
 .menu-prim__item:hover .menu-sec__list {
   display: table;

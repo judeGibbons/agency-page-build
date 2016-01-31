@@ -25,7 +25,6 @@
 }
 
 .articlelinks__block.news {
-  //background: $limegreen url("../../graphics/news-icon-trans-90x90.png") no-repeat top right;
   background: $limegreen;
   .articlelinks__caption:after {
     content: '';
@@ -61,15 +60,14 @@
 
 .articlelinks__date {
   display: block;
+  font-style: italic;
 }
 
-
-
 .articlelinks__readlink {
-  color: $link;
   position: absolute;
   bottom: 10px;
   left: 10px;
+  @include linkbg;
 
   &:after {
     content: '>';

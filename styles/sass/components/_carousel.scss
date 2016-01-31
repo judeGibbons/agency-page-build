@@ -1,8 +1,4 @@
-//<li class="carousel__slide slide2">
-//<p class="carousel__caption">Kendal to Kew</p>
-//<img src="./graphics/network-q-1240x390.jpg" alt="Thank you"></li>
-
-#carousel {
+.carousel {
   max-width: 1240px;
   max-height: 390px;
   position: relative;
@@ -13,7 +9,7 @@
   padding-left: 0;
 }
 
-.no-js ul#carousel__slides li:first-child {
+.no-js .carousel__slides li:first-child {
   position: relative;
   opacity: 1;
 }
@@ -24,31 +20,21 @@
   top: 0;
   padding-left: 0;
   display: block;
-}
-
-.carousel__slide {
   z-index: 1;
   opacity: 0;
   transition: opacity 1.5s ease-in;
-}
-
-li.carousel__slide.active {
-  opacity: 0;
-  transition: opacity 1.5s ease-out;
-}
-
-#carousel li.carousel__slide.next {
-  position: static;
-  z-index: 10;
-  opacity: 1;
-  transition: opacity 1.5s ease-out;
-}
-
-#carousel li.carousel__slide.start {
-  position: static;
-  z-index: 10;
-  opacity: 1;
-  transition: none;
+  &.active {
+    transition: opacity 1.5s ease-out;    
+  }
+  &.next, &.start {
+    position: static;
+    z-index: 10;
+    opacity: 1;
+    transition: opacity 1.5s ease-out;    
+  }
+  &.start {
+    transition: none;    
+  }
 }
 
 .carousel__slide img {
@@ -59,70 +45,41 @@ li.carousel__slide.active {
 
 .carousel__caption {
   position: absolute;
-  max-width: 66%;
-  //max-width: 1240px;
-  //background-color: #666;
-  bottom: 20px;
-  left: 20px;
-  z-index: 10;
-  font-size: 2.5rem;
-  text-align: left; //varies?
-  color: $text-on-dark-bg;
+  z-index: 20;
+  text-align: left;
+  bottom: 10px;
+  left: 10px;
+  .lightpic + & {
+    color: $text-on-light-bg;
+  }
+  .darkpic + & {
+    color: $text-on-dark-bg;
+  }
+  .texttop + & {
+    bottom: auto;
+    top: 10px;
+  }
+  @include tabletplus {
+    bottom: 20px;
+    left: 20px;
+    max-width: 66%;
+  }
+
 }
 
 
-//<li class="carousel__slide slide1"><p class="carousel__caption">Why?</p><img src="390.jpg"></li>
-
-.carousel__caption a { //not like this!!
-  //position: relative;
-  //max-width: 66%;
-  //max-width: 1240px;
-  //background-color: #666;
+.carousel__readlink {
   white-space: nowrap;
-  font-size: 0.5em; //<-- need to set this on caption
   margin-left: 10px;
   font-style: italic;
+  @include linkbg;
+  a {
+    text-decoration: none;
+  }
+  &::after {
+    content: '>';
+    position: absolute;
+    top: 20px;
+    margin-left: 6px;
+  }
 }
-
-.carousel__caption a::after { //not like this!!
-  //position: relative;
-  //max-width: 66%;
-  //max-width: 1240px;
-  //background-color: #666;
-  content: '>>';
-}
-
-
-/*
-.carousel__indicator__container {
-  position: absolute;
-  bottom: 25px;
-  width: 100%;
-  z-index: 30;
-}
-
-#carousel__indicator__list {
-  display: inline-block;
-}
-
-.carousel__indicator.start, .carousel__indicator.active {
-  -webkit-transform: rotate(45deg);
-  -moz-transform: rotate(45deg);
-  -ms-transform: rotate(45deg);
-  transform: rotate(45deg);
-}
-
-li[class^="carousel__indicator"] {
-  width: 10px;
-  height: 10px;
-  margin-right: 10px;
-  background-color: #fff;
-  float: left;
-}
-
-li[class^="carousel__indicator"]:last-child {
-  margin-right: 0;
-}
-
-
-*/
