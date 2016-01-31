@@ -18,11 +18,11 @@ h1, h2, h3, h4, h5, h6 {
   font-weight: bold;
 }
 
-/*
-a, a:link {color: $link; font-weight: bold;}
-a:visited {color: $visited-link;}
-a:hover, a:focus, a:active {color: $focus-active-link;}
-*/
+
+//a, a:link {color: $link; font-weight: bold;}
+//a:visited {color: $visited-link;}
+//a:hover, a:focus, a:active {color: $focus-active-link;}
+
 header, .carousel, .articlelinks {
   a, a:link, a:visited, a:hover, a:focus, a:active {
     color: inherit; text-decoration: none; font-weight: normal;
@@ -48,7 +48,12 @@ header, .carousel, .articlelinks {
   font-family: $serif-font;
 }
 
-.social-block {
+.twitter-head {
+  font-family: $sans-font;
+  text-transform: lowercase;
+}
+
+.twitter-text {
   font-family: $serif-font;
   font-size: 0.9rem;
 }

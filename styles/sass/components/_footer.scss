@@ -9,6 +9,19 @@ footer {
   display: inline-block;
 }
 
+.footer__socialsharing {
+  max-width: 100%;
+  display: inline-block;
+  img {
+    max-width: 100%;
+  }
+}
+
+.footer__signup {
+  margin-left: 20px;
+  float: right;
+}
+
 .footer__info--link {
   margin-right: 20px;
   float: left;
@@ -19,9 +32,3 @@ footer {
   float: right;
 }
 
-.footer__socialsharing {
-  max-width: 100%;
-  img {
-    max-width: 100%;
-  }
-}

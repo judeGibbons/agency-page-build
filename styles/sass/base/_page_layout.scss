@@ -10,6 +10,10 @@ header, main, .main, footer {
   background-color: $bg-col;
 }
 
+header {
+  z-index: 10;
+}
+
 .container {
   position: relative;
   margin: 0 auto;

@@ -1,5 +1,18 @@
 .social-block {
-    padding: 16px;
-    background-color: $rollover-bg;
-    border-radius: 4px;
+  padding: 16px;
+  background-color: $rollover-bg;
+  border-radius: 4px;
 }
+
+.twitter-head::before {
+    content: '';
+    top: 0;
+    left: 0;
+    width: 20px;
+    height: 16px;
+    margin-right: 4px;
+    display: inline-block;
+    z-index: 20;
+    background-image: url("../../graphics/twitter-logo-white-20x16.png");
+    background-repeat: no-repeat;
+  }

@@ -26,7 +26,7 @@
 
 .articlelinks__block.news {
   background: $limegreen;
-  .articlelinks__caption:after {
+  .articlelinks__caption::after {
     content: '';
     width: 90px;
     height: 90px;
@@ -69,111 +69,14 @@
   left: 10px;
   @include linkbg;
 
-  &:after {
+  a:hover::before {
+    width: 107%;
+  }
+
+  &::after {
     content: '>';
     position: relative;
     left: 5px;
     top: 2px;
   }
 }
-
-
-
-
-
-
-
-
-/* ====  rollover bits - use this
-
-#callstoaction {
-  color: #fff;
-}
-
-div[id^="callstoaction--"] {
-  width: 25%;
-  height: 0;
-  padding-bottom: 25%;
-  float: left;
-  position: relative;
-}
-
-div[id^="callstoaction--"] img {
-  max-width: 100%;
-  max-height: 100%;
-  position: absolute;
-  display: block;
-}
-
-.callstoaction__overlay {
-  height: 100%;
-  width: 100%;
-  position: absolute;
-  top: 0;
-  z-index: 10;
-}
-
-.callstoaction__graphic {
-  width: 65px;
-  height: 64px;
-  background: url("../graphics/sprite-94x77.png") no-repeat -27px -11px;
-  margin: 20px auto;
-}
-
-.callstoaction__text, .callstoaction__graphic, .callstoaction__click {
-  position: relative;
-  text-align: center;
-}
-
-.callstoaction__text {
-  font-size: 1.125rem;
-  font-weight: normal;
-  margin-top: 25%;
-}
-
-.callstoaction__click {
-  width: 50%;
-  padding: 2px;
-  border-radius: 4px;
-  position: relative;
-  left: 25%;
-}
-
-.callstoaction__click a, .callstoaction__click:hover a {
-  color: #fff;
-}
-
-
-/* ====    INTERACTION   ==== 
-
-.callstoaction__overlay {
-  background-color: rgba(0,0,0,0);
-  transition: background-color .1s ease-in;
-}
-
-.callstoaction__overlay:hover {
-  background-color: rgba(0,0,0,0.7);
-  transition: background-color .1s ease-in;
-}
-
-.callstoaction__overlay [class^="callstoaction__"] {
-  visibility: hidden;
-  transition: display .1s ease-in;
-}
-  
-.callstoaction__overlay:hover [class^="callstoaction__"] {
-  visibility: visible;
-  transition: display .1s ease-in;
-}
-
-.callstoaction__click {
-  background-color: transparent;
-  transition: background .1s ease-in;
-}
-
-.callstoaction__click:hover {
-  background-color: rgb(75,90,98); /* rgb for IE8 
-  background-color: rgba(255,255,255,0.3); /* opacity on rollover 
-  transition: background .1s ease-in;
-}
-*/

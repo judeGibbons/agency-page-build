@@ -10,14 +10,13 @@
   @include tabletplus {
     display: none;
   }
-  &:after { //need to create menu icon
+  &::after {
     content: '';
-    background: transparent url("../graphics/sprite-94x77.png") no-repeat -1px -12px;
+    background: transparent url("../../graphics/menuicon-36x17.png") no-repeat top right;
     display: block;
-    height: 16px;
+    height: 17px;
     width: 36px;
     margin: 0 10px;
-    background-color: blue; //TEMP
   }
 }
 
@@ -74,7 +73,7 @@
     &:last-child {
       margin-right: 0px;
     }
-    a {
+    > a {
       @include linkbg;
     }
   }
@@ -101,7 +100,7 @@
 }
 
 .menu-sec__item {
-    a {
+    > a {
       @include linkbg;
     }
 }
