@@ -18,6 +18,7 @@ I tried to use SASS to calculate where the blog/news links ended up in a partial
 
 **Images:** I have not used a responsive image technique (srcset or picture) in this case but given the image-heavy nature of the page this would be best practice. In some cases I would load the images in a single background sprite, but in this case the images were all semantic content and so shouldn't be inserted as background images (although I am wondering if the images in the article links aren't really meaningful content so should actually be background images).
 
+**JavaScript:** this is currently in one file although it should be split into modules to make it more easily maintainable (I sometimes struggle to make this work so for speed I left it as is). This replaces the default class of 'no-js' on the body (which enables the menu to work on mobile if JavaScript is not available) with 'js'. It then makes the mobile dropdown menu clickable on and off, including being able to close the menu by clicking off it, and makes the carousel slides fade in and out. Both of these are done by replacing classes on the relevant DOM elements.
 
 ##Compromises due to time
 
