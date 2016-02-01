@@ -2,8 +2,7 @@ document.addEventListener("DOMContentLoaded",init,false);
 
 function init() {
   addjsclass();
-//  createClosedElementsArray();
-//  addListenerToWindow();
+  addListenerToWindow();
   if (document.getElementById('carousel-js')) {
     carousel();
   }
@@ -14,7 +13,6 @@ function init() {
 function addjsclass() {
   document.getElementsByTagName('body')[0].className = document.getElementsByTagName('body')[0].className.replace(/(\s)no-js/," js");
 }
-
 
 //--->>> CAROUSEL <<<---//
 
@@ -95,5 +93,47 @@ function carousel() {
 
   getElementsByClassName("carousel__slide");
   appendActiveClass();
+}
 
+
+//--->>>   MENU   <<<---//
+
+// adds event listener to window so it can toggle mobile menu, and can close menu when clicked elsewhere
+function addListenerToWindow() {
+  if (window.addEventListener) {
+    window.addEventListener('click', toggleMenu, false);
+  } else if (window.attachEvent) {
+    window.attachEvent('onclick', toggleMenu);
+  }
+}
+
+var closedClass = new RegExp("(^|\\s)closed(\\s|$)");
+var openClass = new RegExp("(^|\\s)open(\\s|$)");
+var menuIcon = document.getElementById('menu-link--mobile-js');
+var primaryMenu = document.getElementById('menu-prim__list-js');
+var menuContentsArray = primaryMenu.getElementsByTagName('*');
+
+function toggleMenu(e) {
+
+   function matchNavListItem() {
+    for (var i=0; i<menuContentsArray.length; i++) {
+      if (e.target == menuContentsArray[i]) {
+        return true;
+      };
+    };
+  };
+  matchNavListItem();
+
+  if (e.target == menuIcon) {
+    if (closedClass.test(primaryMenu.className) ) {
+      primaryMenu.className = primaryMenu.className.replace(/(\s)closed/," open");
+    } else if (openClass.test(primaryMenu.className) ) {
+      primaryMenu.className = primaryMenu.className.replace(/(\s)open/," closed");
+    }
+    e.preventDefault();
+  } else if ( (e.target == primaryMenu.firstElementChild)||(matchNavListItem()) ) {
+    return;
+  } else if (openClass.test(primaryMenu.className) ) {
+    primaryMenu.className = primaryMenu.className.replace(/(\s)open/," closed");
+  }
 }

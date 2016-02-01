@@ -23,7 +23,7 @@ h1, h2, h3, h4, h5, h6 {
 //a:visited {color: $visited-link;}
 //a:hover, a:focus, a:active {color: $focus-active-link;}
 
-header, .carousel, .articlelinks {
+header, .carousel, .articlelinks, footer {
   a, a:link, a:visited, a:hover, a:focus, a:active {
     color: inherit; text-decoration: none; font-weight: normal;
   }
@@ -91,5 +91,8 @@ header, .carousel, .articlelinks {
 }
 
 footer {
-  font-size: 0.9rem; 
+  font-size: 0.9rem;
+  .copyright {
+    font-size: 0.7rem;
+  }
 }

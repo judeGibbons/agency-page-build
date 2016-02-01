@@ -1,0 +1,22 @@
+body::before { 
+  display: block;
+  width: 100%;
+  font-size: 1em;
+  line-height: 1;
+  color: black;
+  font-family: "Arial";
+  content: 'default';
+  background-color: red;
+  @include tabletplus {
+    content: 'tabletplus';
+    background-color: yellow;
+  }
+  @include desktopplus {
+    content: 'desktopplus';
+    background-color: red;
+  }
+  @include widescreenonly {
+    content: 'widescreen only';
+    background-color: yellow;
+  }
+}

@@ -35,10 +35,10 @@
   padding: 4px;
   position: absolute;
   right: 20px;
-  top: 24px;
+  top: 42px;
   z-index: 10;
   border-radius: 2px;
-  background-color: rgba($rollover-bg,0.4);
+  background-color: rgba($rollover-bg,0.8);
   white-space: nowrap;
   @include tabletplus {
     background-color: transparent;
@@ -79,17 +79,18 @@
   }
 }
 
-.menu-sec__list { //may need to put menu-prim back in front?
+.menu-sec__list {
   display: none;
   text-transform: capitalize;
   position: absolute;
   z-index: 10;
   padding: 4px;
   border-radius: 2px;
-  background-color: rgba($rollover-bg,0.4);
-  right: 105%;
+  background-color: rgba($rollover-bg,0.8);
+  right: 102%;
   top: -4px;
   @include tabletplus {
+    background-color: rgba($rollover-bg,0.4);
     right: 0px;
     top: 1.3em;
     white-space: nowrap;

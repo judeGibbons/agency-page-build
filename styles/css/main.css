@@ -64,7 +64,7 @@ h1, h2, h3, h4, h5, h6 {
 .strong {
   font-weight: bold; }
 
-header a, header a:link, header a:visited, header a:hover, header a:focus, header a:active, .carousel a, .carousel a:link, .carousel a:visited, .carousel a:hover, .carousel a:focus, .carousel a:active, .articlelinks a, .articlelinks a:link, .articlelinks a:visited, .articlelinks a:hover, .articlelinks a:focus, .articlelinks a:active {
+header a, header a:link, header a:visited, header a:hover, header a:focus, header a:active, .carousel a, .carousel a:link, .carousel a:visited, .carousel a:hover, .carousel a:focus, .carousel a:active, .articlelinks a, .articlelinks a:link, .articlelinks a:visited, .articlelinks a:hover, .articlelinks a:focus, .articlelinks a:active, footer a, footer a:link, footer a:visited, footer a:hover, footer a:focus, footer a:active {
   color: inherit;
   text-decoration: none;
   font-weight: normal; }
@@ -119,6 +119,8 @@ header a, header a:link, header a:visited, header a:hover, header a:focus, heade
 
 footer {
   font-size: 0.9rem; }
+  footer .copyright {
+    font-size: 0.7rem; }
 
 html {
   box-sizing: border-box; }
@@ -168,30 +170,6 @@ header {
   overflow: hidden;
   visibility: hidden; }
 
-/* TEMP STYLES FOR DEV */
-body:before {
-  display: block;
-  width: 100%;
-  font-size: 1em;
-  line-height: 1;
-  color: black;
-  font-family: "Arial";
-  content: 'default';
-  background-color: red; }
-  @media (min-width: 40rem) {
-    body:before {
-      content: 'tabletplus';
-      background-color: yellow; } }
-  @media (min-width: 64rem) {
-    body:before {
-      content: 'desktopplus';
-      background-color: red; } }
-  @media (min-width: 77.5rem) {
-    body:before {
-      content: 'widescreen only';
-      background-color: yellow; } }
-
-/* END OF TEMP STYLES FOR DEV */
 header {
   position: relative;
   height: 120px;
@@ -264,10 +242,10 @@ header {
   padding: 4px;
   position: absolute;
   right: 20px;
-  top: 24px;
+  top: 42px;
   z-index: 10;
   border-radius: 2px;
-  background-color: rgba(193, 191, 216, 0.4);
+  background-color: rgba(193, 191, 216, 0.8);
   white-space: nowrap; }
   @media (min-width: 40rem) {
     .menu-prim__list {
@@ -319,11 +297,12 @@ header {
   z-index: 10;
   padding: 4px;
   border-radius: 2px;
-  background-color: rgba(193, 191, 216, 0.4);
-  right: 105%;
+  background-color: rgba(193, 191, 216, 0.8);
+  right: 102%;
   top: -4px; }
   @media (min-width: 40rem) {
     .menu-sec__list {
+      background-color: rgba(193, 191, 216, 0.4);
       right: 0px;
       top: 1.3em;
       white-space: nowrap; } }
@@ -599,65 +578,6 @@ header {
     position: relative;
     left: 5px;
     top: 2px; }
-
-input[type=text] {
-  margin-bottom: 0.4em;
-  width: 100%; }
-
-.social__contacts button {
-  -webkit-appearance: none;
-  -moz-appearance: none;
-  background-color: transparent;
-  margin: 10px auto 26px;
-  border: 1px solid #fff;
-  width: 190px;
-  height: 35px;
-  border-radius: 4px;
-  font-size: 0.9375rem;
-  color: #fff;
-  font-family: "Montserrat", "Arial", sans-serif;
-  text-transform: uppercase; }
-
-.social__contacts fieldset {
-  margin: 0 52px 14px;
-  border: 1px solid #fff;
-  text-align: left;
-  height: 2.25rem; }
-
-.social__contacts input[type="text"], .social__contacts label, .social__contacts legend {
-  display: inline-block; }
-
-.social__contacts input[type="text"] {
-  width: 60%;
-  background-color: transparent;
-  border: 0;
-  font-size: 1em;
-  font-family: "Volkhov", "Palatino", serif;
-  color: #fff; }
-
-.social__contacts label {
-  width: 26%;
-  margin: 9px 2% 9px 4%;
-  border-right: 1px solid #fff;
-  line-height: 1rem;
-  font-style: italic; }
-
-.social__contacts legend {
-  margin: 8px 0 0 2%;
-  position: absolute;
-  border-right: 1px solid #fff;
-  height: 20px;
-  padding-right: 6px; }
-
-#signup--birthday--day, #signup--birthday--month {
-  background-color: transparent;
-  border: 0;
-  color: #fff;
-  font-family: inherit;
-  font-size: inherit;
-  position: relative;
-  margin: 6px 10px 0 0;
-  left: 6rem; }
 
 footer {
   position: relative;

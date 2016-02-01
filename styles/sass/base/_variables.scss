@@ -49,7 +49,6 @@ $break-narrowestwidth: 28rem; //448px;
 
 //these for text in articlelink blocks
 
-
 @mixin largermobile {
   @media (min-width: #{$break-narrowestwidth}) {
     @content;
