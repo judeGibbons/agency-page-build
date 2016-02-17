@@ -63,8 +63,10 @@ $break-narrowestwidth: 28rem; //448px;
 
 
 //BACKGROUND INDICATION FOR LINKS
+
+/*
 @mixin linkbg {
-  &:hover::before {
+  &:hover { //::before {
     content: '';
     background-color: rgba($orange, 0.5);
     padding: 2px 5px;
@@ -78,7 +80,17 @@ $break-narrowestwidth: 28rem; //448px;
     z-index: 0;
   }
 }
+*/
 
+
+@mixin linkbg {
+  &:hover { //::before {
+    content: '';
+    background-color: rgba(248, 159, 89, 0.5);
+    border-radius: 6px;
+    z-index: 0;
+  }
+}
 
 //CALCULATING ROWS FOR BLOG/NEWS LINKS//
 @mixin rowCalcs($numPerRow, $margin) {

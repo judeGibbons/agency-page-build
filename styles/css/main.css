@@ -48,6 +48,23 @@ table {
   border-collapse: collapse;
   border-spacing: 0; }
 
+/*
+@mixin linkbg {
+  &:hover { //::before {
+    content: '';
+    background-color: rgba($orange, 0.5);
+    padding: 2px 5px;
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    display: inline-block;
+    border-radius: 6px;
+    z-index: 0;
+  }
+}
+*/
 body {
   font-family: "Montserrat", "Arial", sans-serif;
   font-size: 1.125rem;
@@ -277,16 +294,9 @@ header {
       margin-right: 6px; }
       .menu-prim__item:last-child {
         margin-right: 0px; }
-      .menu-prim__item > a:hover::before {
+      .menu-prim__item > a:hover {
         content: '';
         background-color: rgba(248, 159, 89, 0.5);
-        padding: 2px 5px;
-        position: absolute;
-        top: 0;
-        left: 0;
-        width: 100%;
-        height: 100%;
-        display: inline-block;
         border-radius: 6px;
         z-index: 0; } }
 
@@ -310,16 +320,9 @@ header {
     .menu-sec__list {
       left: 0px; } }
 
-.menu-sec__item > a:hover::before {
+.menu-sec__item > a:hover {
   content: '';
   background-color: rgba(248, 159, 89, 0.5);
-  padding: 2px 5px;
-  position: absolute;
-  top: 0;
-  left: 0;
-  width: 100%;
-  height: 100%;
-  display: inline-block;
   border-radius: 6px;
   z-index: 0; }
 
@@ -451,17 +454,11 @@ header {
 .carousel__readlink {
   white-space: nowrap;
   margin-left: 10px;
-  font-style: italic; }
-  .carousel__readlink:hover::before {
+  font-style: italic;
+  padding: 2px 1.5em 2px 5px; }
+  .carousel__readlink:hover {
     content: '';
     background-color: rgba(248, 159, 89, 0.5);
-    padding: 2px 5px;
-    position: absolute;
-    top: 0;
-    left: 0;
-    width: 100%;
-    height: 100%;
-    display: inline-block;
     border-radius: 6px;
     z-index: 0; }
   .carousel__readlink a {
@@ -469,7 +466,7 @@ header {
   .carousel__readlink::after {
     content: '>';
     position: absolute;
-    top: 20px;
+    top: 1.25em;
     margin-left: 6px; }
 
 .articlelinks__block {
@@ -559,16 +556,9 @@ header {
   position: absolute;
   bottom: 10px;
   left: 10px; }
-  .articlelinks__readlink:hover::before {
+  .articlelinks__readlink:hover {
     content: '';
     background-color: rgba(248, 159, 89, 0.5);
-    padding: 2px 5px;
-    position: absolute;
-    top: 0;
-    left: 0;
-    width: 100%;
-    height: 100%;
-    display: inline-block;
     border-radius: 6px;
     z-index: 0; }
   .articlelinks__readlink a:hover::before {
