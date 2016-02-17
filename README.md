@@ -1,6 +1,6 @@
-#Cogent Elliott page build
+#Marketing agency page build
 
-This is a redesign of Cogent Elliott's <a href="http://cogent.co.uk" target="_blank">current homepage</a>. The site is uploaded <a href="http://gimaju.net/cogent/" target="_blank">here</a>
+This is a redesign of a marketing agency's current homepage. The site will be uploaded on my portfolio site.
 
 I have been able to test this only on a limited number of devices. The site is designed for modern browsers only: it works on Mac browsers, iPad and a modern Android phone but not on old (v2.3) Android (it doesn't seem to recognise the mediaqueries for instance). I haven't been able to test on IE. I have used HTML5 semantic elements which would need a fallback on older browsers.
 
@@ -26,14 +26,14 @@ There are quite a few bits of design and functionality which aren't yet complete
 
 * The following needs fixing: 
   * z-indexes in header and article links; 
-  * improvement is needed in colours and typography - for instance, the rollover colours - they are currently based on colours picked from the Cogent Elliott logo - and link design (including focus, hover etc) particularly in the twitter box and footer needs to be  more consistent;
+  * improvement is needed in colours and typography - for instance, the rollover colours and link design (including focus, hover etc) particularly in the twitter box and footer needs to be  more consistent;
   * the rollover highlight in the secondary menu covers the whole ul, and that in the carousel covers the whole caption, not just the clickable link;
   * the background that appears on hovered links in the carousel and the article links doesn't cover the arrow at the right hand side (which is inserted as an ::after pseudo element);
   * article link blocks: the text is unreadable on some of the pictures: I would possibly put a semi-transparent overlay behind the text which would make it more readable.
 
 * The Twitter feed and sharing icons have been pasted in rather than brought in using the API.
 
-* The signup form in the footer needs creating, as does the search bar in the header (although I'm not sure the site needs this).
+* A signup form in the footer needs creating.
 
 * The dropdown menu on mobile needs to display at a wider viewport than currently: the menu overlaps the logo at about 760px. I would reorder the menu to put the most important items (Our Work, Services, Contact) first, and then when the mobile menu kicks in I would leave those three items visible and put the rest of the menu in the dropdown. The hamburger icon would ideally be drawn in canvas (or with borders on spans). I would also add a slight delay on the menus so that it's easier to select the submenu item. On mobile, the secondary menu is too wide because of the long link names - this needs fixing (probably by removing nowrap but I'd have to check this didn't break anything else).
 
