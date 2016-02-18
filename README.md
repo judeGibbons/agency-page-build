@@ -1,6 +1,6 @@
 #Marketing agency page build
 
-This is a redesign of a marketing agency's current homepage. The site will be uploaded on my portfolio site.
+This is a redesign of a marketing agency's current homepage: this is uploaded on . The site will be uploaded on [my portfolio site](http://gimaju.net/agency-page-build/).
 
 I have been able to test this only on a limited number of devices. The site is designed for modern browsers only: it works on Mac browsers, iPad and a modern Android phone but not on old (v2.3) Android (it doesn't seem to recognise the mediaqueries for instance). I haven't been able to test on IE. I have used HTML5 semantic elements which would need a fallback on older browsers.
 

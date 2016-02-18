@@ -31,7 +31,7 @@ function carousel() {
 
   function appendActiveClass() {
     counter = (imagesArray.length-1);
-    var intervalTime = 5000000;
+    var intervalTime = 5000;
     var changeClassSpeed = setInterval(changeActiveClass, intervalTime);
     function changeActiveClass() {
       for (var i=0, maxi=imagesArray.length; i<maxi; i++) {
