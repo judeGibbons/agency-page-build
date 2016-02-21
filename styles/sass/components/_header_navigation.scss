@@ -40,6 +40,10 @@
   border-radius: 2px;
   background-color: rgba($rollover-bg,0.8);
   white-space: nowrap;
+
+//above tabletplus,but below midwidth only have first 3 menu items 
+//have second 3 items in hamburger menu
+
   @include tabletplus {
     background-color: transparent;
     position: relative;

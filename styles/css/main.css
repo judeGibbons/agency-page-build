@@ -149,7 +149,9 @@ header, main, .main, footer {
   background-color: #ffffff; }
 
 header {
-  z-index: 10; }
+  position: relative;
+  height: 120px;
+  z-index: 30; }
 
 .container {
   position: relative;
@@ -187,26 +189,55 @@ header {
   overflow: hidden;
   visibility: hidden; }
 
+body::before {
+  display: block;
+  width: 100%;
+  font-size: 1em;
+  line-height: 1;
+  color: black;
+  font-family: "Arial";
+  content: 'default';
+  background-color: red; }
+  @media (min-width: 28rem) {
+    body::before {
+      content: 'largermobile/tabletplus';
+      background-color: yellow; } }
+  @media (min-width: 40rem) {
+    body::before {
+      content: 'tabletplus';
+      background-color: yellow; } }
+  @media (min-width: 50rem) {
+    body::before {
+      content: 'midwidth/desktopplus';
+      background-color: red; } }
+  @media (min-width: 64rem) {
+    body::before {
+      content: 'desktopplus';
+      background-color: red; } }
+  @media (min-width: 77.5rem) {
+    body::before {
+      content: 'widescreen only';
+      background-color: yellow; } }
+
 header {
-  position: relative;
-  height: 120px;
   background-color: #ffffff;
   background-image: url("../../graphics/agency-header-background-84x120.png");
   background-repeat: repeat-x;
   background-position: 0 0; }
 
 .header__logo {
-  text-align: left; }
+  text-align: left;
+  z-index: 10;
+  position: absolute; }
 
 .menu-layout {
   position: relative;
-  top: -66px;
+  top: 50px;
   z-index: 0;
   text-align: right;
   margin-right: -4px; }
   @media (min-width: 40rem) {
     .menu-layout {
-      top: -73px;
       text-align: right;
       margin-right: 10px; } }
   @media (min-width: 64rem) {

@@ -11,7 +11,9 @@ header, main, .main, footer {
 }
 
 header {
-  z-index: 10;
+  position: relative;
+  height: 120px;
+  z-index: 30;
 }
 
 .container {

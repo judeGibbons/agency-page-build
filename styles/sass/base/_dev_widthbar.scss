@@ -7,9 +7,17 @@ body::before {
   font-family: "Arial";
   content: 'default';
   background-color: red;
+  @include largermobile {
+    content: 'largermobile/tabletplus';
+    background-color: yellow;
+  }
   @include tabletplus {
     content: 'tabletplus';
     background-color: yellow;
+  }
+  @include midwidth {
+    content: 'midwidth/desktopplus';
+    background-color: red;
   }
   @include desktopplus {
     content: 'desktopplus';
@@ -20,3 +28,9 @@ body::before {
     background-color: yellow;
   }
 }
+
+//largermobile min-width break-narrowestwidth 28rem, 448px
+//tabletplus min-width break-narrowwidth 40rem, 560px
+//midwidth min-width break-midwidth 50rem, 800px
+//desktopplus min-width break-desktopwidth 64rem, 1024px
+//widescreenonly min-width break-fullwidth 77.5rem, 1240px

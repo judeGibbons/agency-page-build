@@ -2,7 +2,7 @@
 @import "base/variables";
 @import "base/typography";
 @import "base/page_layout";
-//@import "base/dev_widthbar";
+@import "base/dev_widthbar"; //only for dev
 @import "components/header_layout";
 @import "components/header_navigation";
 @import "components/header_social_links";
